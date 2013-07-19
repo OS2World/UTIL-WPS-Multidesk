@@ -1,0 +1,18 @@
+#include "OS2.H"
+
+DLGTEMPLATE 100 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG "SaveFldr X.X", 100, 87, 64, 277, 145, 
+           WS_SYNCPAINT | NOT FS_DLGBORDER | FS_SIZEBORDER,
+           FCF_SYSMENU | FCF_TITLEBAR | FCF_MINBUTTON | FCF_MAXBUTTON
+    BEGIN
+        LISTBOX         101, 3, 23, 273, 121,
+                        WS_GROUP | LS_NOADJUSTPOS | LS_HORZSCROLL | LS_MULTIPLESEL
+        DEFPUSHBUTTON   "Generate", 102, 4, 4, 49, 16
+        PUSHBUTTON      "Select all", 103, 56, 4, 52, 16
+        PUSHBUTTON      "Save", 104, 112, 4, 34, 16
+        PUSHBUTTON      "Exit", 105, 150, 4, 33, 16
+        PUSHBUTTON      "Help", 106, 186, 4, 32, 16
+        PUSHBUTTON      "View Log", 107, 222, 4, 49, 16
+    END
+END

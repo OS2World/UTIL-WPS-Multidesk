@@ -1,0 +1,14 @@
+.. ----------------------------------------
+.1 Prerequisites
+.. ----------------------------------------
+.an PREREQUISITES
+.
+You should be able to use [=TITLE] under OS/2 release 4 (Warp) and up.
+I've been using it on OS/2 Warp 4 (with all recent fixpacks and kernels),
+and on WSeB up to fixpack 2 (with various kernels).
+
+[=TITLE] requires the following:
+.ul
+- *REXX* installed
+- a boot partition which supports long file names (HPFS, JFS, etc).
+

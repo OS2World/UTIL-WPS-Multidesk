@@ -1,0 +1,156 @@
+.. ----------------------------------------
+.1 .SUBLINK samples
+.. ----------------------------------------
+.an SAMPLES_SUBLINK
+.
+Here are some samples demonstrating the power of the *.SUBLINK* command.
+This section already at the bottom demoes the sublink command without
+splitting the window, but just listing up links to all panels directly
+below this one. The command for the unordered list for one sub level only
+is:
+
+.fo off
+ .sublink unordered 1
+.fo on
+.
+ or as abbreviation:
+.fo off
+ .su u 1
+.fo on
+.
+So here is the list of pages exactly one level below, giving you demos
+of the *.SUBKLINK* command. The command used in these samples is being
+displayed in each split window.
+.
+These command always splits the remaining part
+of the page space either vertically with the parameter *Vxx* or horizontally
+with the parameter *Hxx*, where xx is a fraction of 100 percent
+compared to the height and width of the INF application space
+(not compared to the remaining space !).
+.
+As an example V30 splits the space into two windows of 30 and 70 percent
+of the size of the INF application space.
+.su u 1
+
+.. ----------------------------------------
+.2 .SUBLINK sample - three rows
+.. ----------------------------------------
+.
+.fo off
+ .su H30 u
+.fo on
+.su H30 u
+
+.3 middle panel
+.fo off
+ .su H30 u
+.fo on
+.su H30 u
+
+.4 lower panel
+.
+This window has only a height of 40% of the complete width of the INF
+application space, as the other two windows use up to 60% of it.
+
+..
+.. ------------------------------------------------------------
+..
+.2 .SUBLINK sample - three cols
+.fo off
+ .su V30 u
+.fo on
+.su V30 u
+
+.3 middle panel
+.fo off
+ .su V30 u
+.fo on
+.su V30 u
+
+.4 right panel
+.
+This window has only a width of 40% of the complete width of the INF
+application space, as the other two windows use up to 60% of it.
+
+..
+.. ------------------------------------------------------------
+..
+.2 .SUBLINK sample - mixed right down right
+.
+.fo off
+ .su V30 u
+.fo on
+.su V30 u
+
+.3 2nd panel
+.
+.fo off
+ .su H30 u
+.fo on
+.su H30 u
+
+.4 3rd panel
+.
+.fo off
+ .su V30 u
+.fo on
+.su V30 u
+
+.5 4th panel
+.
+.fo off
+ .su H30 u
+.fo on
+.su H30 u
+
+.6 5th panel
+
+..
+.. ------------------------------------------------------------
+..
+.2 .SUBLINK sample - mixed down right down
+.
+.fo off
+ .su H30 u
+.fo on
+.su H30 u
+
+.3 2nd panel
+.
+.fo off
+ .su V30 u
+.fo on
+.su V30 u
+
+.4 3rd panel
+.
+.fo off
+ .su H30 u
+.fo on
+.su H30 u
+
+.5 4th panel
+.
+.fo off
+ .su V30 u
+.fo on
+.su V30 u
+
+.6 5th panel
+
+..
+.. ------------------------------------------------------------
+..
+.2 .SUBLINK sample - only splitting windows
+.fo off
+ .su V30 no
+.fo on
+.su V30 no
+
+.3 right panel
+.
+[=NOTE]
+.ul compact
+- The left window does not contain the list. The parameter *NOLIST*
+  (here: the abbreviation *no*) prevents [=TITLE] from creating the list.
+

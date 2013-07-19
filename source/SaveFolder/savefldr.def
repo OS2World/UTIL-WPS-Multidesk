@@ -1,0 +1,15 @@
+LIBRARY SAVEFLDR INITINSTANCE LONGNAMES
+PROTMODE
+DESCRIPTION 'SAVEFLDR Utilities - (c) Copyright IBM Corporation 1993, 1994'
+DATA MULTIPLE NONSHARED
+STACKSIZE 32768
+EXPORTS
+     SAVGETEA          = SavGetEA          @1
+     SAVPUTEA          = SavPutEA          @2
+     SAVLOCKUP         = SavLockUp         @3
+     SAVSHUTDOWN       = SavShutDown       @4
+     SAVBOOTDRIVE      = SavBootDrive      @5
+     SAVSETPRIORITY    = SavSetPriority    @6
+     SAVLOADFUNCS      = SavLoadFuncs      @7
+     SAVDROPFUNCS      = SavDropFuncs      @8
+

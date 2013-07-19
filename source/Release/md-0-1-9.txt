@@ -1,0 +1,32 @@
+                          Upload Information Template for Hobbes.nmsu.edu
+                          ===============================================
+
+        Archive Filename: md-0-1-9.wpi
+       Short Description: Multi users/desktops for OS/2
+        Long Description: MultiDesk will let you have multiple desktops and users under OS/2.
+                          While it is still in early beta stages, it already lets you create,
+                          delete and manage desktops; define users; customize environment,
+                          video resolution, etc for each user; lock some files from other
+                          users' eyes; etc.. Desktops and users are created with an easy to
+                          use management tool.
+
+      Proposed directory
+           for placement: /pub/os2/util/wps
+
+               Your name: Cristiano Guadagnino
+           Email address: criguada (at) libero (dot) it
+    Program contact name: (same)
+   Program contact email: (same)
+             Program URL: (none) 
+
+      Would you like the
+   contact email address
+    included in listings? yes
+
+Operating System/Version: OS/2 v4+
+ Additional requirements: Rexx (traditional), MAKEINI.EXE installed.
+
+                Replaces: md-0-1-8.wpi, md-0-9-8.wpi
+
+
+

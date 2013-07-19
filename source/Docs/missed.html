@@ -1,0 +1,41 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Cristiano Guadagnino">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (OS/2; U) [Netscape]">
+   <title>Things You May Have Missed</title>
+</head>
+<body>
+
+<h1>
+<img SRC="missed.png" NOSAVE height=38 width=392></h1>
+
+<blockquote>The <b><i>mudesk.bnr&nbsp; </i></b>file is a banner that you
+can customize. It is displayed just before the login request upon boot.</blockquote>
+
+<blockquote>The <b><i>&lt;user>.env</i></b>&nbsp; file contains entries
+that are added to the main environment. You can use <i>variable substitution</i>&nbsp;
+here. For example, if you want to add the e:\apps\dummy directory to the
+path, you can add a line resembling the following:
+<p>PATH=%PATH%;e:\apps\dummy;</blockquote>
+
+<blockquote>The <b><i>mudesk.lck</i></b>&nbsp; file is initially a 0-byte
+file. But if you enter one (or more) fully-qualified pathname(s) here,
+they'll be locked on next reboot. You can enter as many lines as you want,
+one pathname for each line. Remember that those locked files are always
+accessible to the <i>root</i>&nbsp; user.
+<p>The <b><i>mdstart.cmd</i></b>&nbsp; file in MultiDesk's directory is
+the pre-login rexx script. It is customizable by the administrator. Look
+in the source to see which parameters are passed by the login program.
+<p>The <b><i>mdstart.cmd</i></b>&nbsp; file in each user directory is the
+post-login rexx script. It is executed when the user is recognized after
+login, and is customizable by every user. Look in the source to see which
+parameters are passed by the login program.
+<p>The <b><i>mdstart.usr</i></b> file in MultiDesk's directory is the <b>template</b>
+used to create the post-login rexx script for each user. The administrator
+may adapt it, to make common changes that he wants for every new user created.
+<br>&nbsp;</blockquote>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+   History:
+   ========
+   
+   v0.2.0
+   ======
+   
+   . MuAdmin: Creation of multimedia folder, and the "multimedia setup"
+     object, in new desktops.
+     
+   . MuAdmin: Added a group to copy XWorkplace Settings while customizing
+     the INIs for a new desktop.
+     
+   . MuAdmin: Now it lets the administrator customize the INIs for a new
+     desktop in a more thorough way (see the "more..." button in the
+     "INI Setup" dialog).
+     
+   . MuDesk: Now it shows the system initialization actions it is performing
+     after login.
+     
+   . MuDesk: Now it supports a pre-login rexx script and per-user post-login
+     rexx scripts.
+     
+   . MuDesk: Added multiple WarpCenter configuration management.
+   
+   . Installation adds RUN=rexinit.exe before the PROTSHELL statement, to
+     initialize the REXX runtime environment and interpreter (see above,
+     about pre-login and post-login scripts).
+   
+   . LOTS of bug fixes and enhancements in MuAdmin and MuDesk.
+   
+   
+   v0.1.9
+   ======
+   
+   . Mudesk.exe crashes on WSeB. Fixed.
+   
+   . Mudesk sometimes locks files even when the administrator logs in. Fixed.
+   
+   . MuAdmin sometimes can't change directory when creating new user. Fixed.
+   
+   . Installation adds "." to the LIBPATH, to make sure that MuAdmin can
+     find its DLLs.
+   
+   . The archive on hobbes was named md-0-9-8 instead that md-0-1-8. BTW,
+     documentation reported the correct number. Now the naming is correct.
+   
+   . Added a notice to the installation, informing the user about a bug
+     in WarpIn that requires user intervention.
+
+   
+   v0.1.8
+   ======
+   
+   . First public release.
+

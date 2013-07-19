@@ -1,0 +1,24 @@
+
+.SET VERSION=0.2.0
+.SET BASETITLE=MultiDesk
+.SET TITLE=*[=BASETITLE]*
+
+.SET TOPICS=Select one of the following topics:
+.SET NOTE=*Note:*
+
+.ti [=BASETITLE] [=VERSION] user's manual
+.hi 234
+
+.include overview.inc
+.include prerequisites.inc
+.include copyright.inc
+.include installation.inc
+.include usage.inc
+.include commands.inc
+.include limitations.inc
+.include history.inc
+.include trademarks.inc
+
+.include samples.inc
+.include sublink.inc
+

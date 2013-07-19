@@ -1,0 +1,70 @@
+   How To: Multi User Star Office
+
+   This is much easier than fiddling around with the Pre and Post Login Rexx
+   scripts.
+
+   The following is a simple batch file called SOff52N.exe.cmd that starts
+   Star Office 5.2 (Win32 version) for User nicki
+
+   chcp 850
+   copy K:\users\nicki\soffice.ini E:\Office52\user\soffice.ini
+   set PATH=k:\odin\system32;k:\odin\system;E:\Office52\program;%path%
+   set BEGINLIBPATH=k:\odin\system32;
+   pe E:\Office52\program\SOFFICE.exe
+   copy E:\Office52\user\soffice.ini K:\users\nicki\soffice.ini
+
+   Here is the version for another User. This is called SOff52P.exe.cmd and
+   as you can see is not very different from the User nicki version above.
+
+   chcp 850
+   copy K:\users\losepete\soffice.ini E:\Office52\user\soffice.ini
+   set PATH=k:\odin\system32;k:\odin\system;E:\Office52\program;%path%
+   set BEGINLIBPATH=k:\odin\system32;
+   pe E:\Office52\program\SOFFICE.exe
+   copy E:\Office52\user\soffice.ini K:\users\losepete\soffice.ini
+
+   The object of the exercise in the above files is to copy the current User
+   soffice.ini file from the current Users' Home Directory to the Directory
+   that Star Office expects to find it's INI file in, overwriting any
+   existing soffice.ini file. Star Office then starts with the correct
+   settings for the User and when closed writes the Users' soffice.ini file
+   to the Users' Home Directory thus saving any changes that the User may
+   have made to their settings.
+
+   If I was using the OS/2 version of Star Office 5.1 the batch file would
+   not need the Odin related statements and presuming that Star Office has
+   entries in Path and LibPath in the config.sys file I would expect the
+   batch file to look like this:-
+
+   copy K:\users\losepete\soffice.ini E:\Office51\user\soffice.ini
+   SOFFICE.exe
+   copy E:\Office51\user\soffice.ini K:\users\losepete\soffice.ini
+   Well that has simplified things a little.
+   Now it becomes very clear that the first line is used to copy the User
+   soffice.ini file and overwrite any existing soffice.ini file in the
+   destination directory  E:\Office51\user\.
+   The next line starts Star Office - with the Users' own soffice.ini file.
+   The last line is used to copy the soffice.ini file to the Users' Home
+   Directory - this happens after Star Office has closed so any changes made
+   are saved.
+
+   The only bits that need changing are the Drive:\Directories involved and
+   the User name. I'm fairly sure that most people will see and understand
+   how to implement this on their own system if they wish.
+
+   There are probably a few applications that can be made "Multi User" using
+   this technique.
+   Please feel free to use, adapt, modify these batch files to your own
+   needs.
+   Please post results, especially successful ones, of trying to make other
+   applications "Multi User" using these, or similar, batch files.
+
+   I do not know how Sun would react to this I must admit. Sun supplies Star
+   Office as a "Single User" application for Windows and OS/2 but "Multi
+   User" for Linux so I don't think they would get uptight about anyone
+   converting the "Single User" versions into "Multi User". Lets face it, No
+   matter how many Users you have only ONE gets to play at a time!
+
+   Happy Individual Visual Desktops :-)
+
+   Pete        email: losepete@cwcom.net

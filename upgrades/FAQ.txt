@@ -1,0 +1,75 @@
+MultiDesk (F)requently (A)sked (Q)uestions:
+===========================================
+
+Q: My applications frequently crash in PMMERGE.DLL on secondary desktops.
+
+A: This may be a problem with font paths. If you have moved your fonts,
+   chances are that the newly created INI files will contain bad paths,
+   pointing to non-existent places. Also, if the paths don't have a drive
+   letter, OS/2 looks in the boot drive as default. Make the necessary
+   corrections (you can use regedit2.exe) and the crashes are gone.
+
+-----------------------------------------------------------------------------
+
+Q: Upon starting Multidesk Administrator I have the following error:
+   << Routine not found in CT_NewLine = CT_NewLine||AFGetBootDrive()||':' >>
+
+A: This error has been reported by a few users during testing. The solution
+   is to switch from Object Rexx to Classic Rexx, or the other way around. 
+   Some users never have problems, others have problems with one of the two
+   language parsers. I still have not clearly undertstood what's going on, 
+   but the switch seems to cure all problems. You can find a script on
+   hobbes.nmsu.edu that switches rexx interpreters on the fly.
+   Look for swrexx.zip using Hobbes' search engine.
+
+-----------------------------------------------------------------------------
+
+Q: How can I change the default password given by Multidesk Administrator to
+   new users? Do I need to use a text editor?
+   
+A: No, you don't need it. Multidesk Administrator main window simply is a
+   standard container view, so you can use in-place editing to change what you
+   want. You can change the password, the various paths, etc.. BE CAREFUL
+   though, if you change the user's name you'll screw you user <-> desktop
+   association. User renaming will be part of the upcoming functionality to
+   be included in the "Manage Users Desktops" option.
+
+-----------------------------------------------------------------------------
+
+Q: May I use drag and drop to copy things from the active desktop to another
+   user's desktop?
+   
+A: Using (or even opening) other users' desktops while they're not active is
+   definitely not a good idea. If you drop a file on another user's desktop
+   he will see it on his desktop when he will log in, but this works only with
+   physical (i.e. file system) entities. You can't do this with abstract
+   objects (i.e. program objects and the like). Abstract objects are
+   represented by structures in your INI files, so they're totally useless when
+   used on another desktop (which has another set of INI files).
+   Also, even if you open another desktop just to look at it, there is a chance
+   that OS/2 will try to interpret the objects that are found there, and will
+   start updating your INI files with plenty of garbage handles. The most
+   common problem is that you get multiple startup folders registered in your
+   INI files. Even if your desktop won't be able to start objects in other
+   desktop's startup folders, this often leads to malfunctions.
+
+-----------------------------------------------------------------------------
+
+Q: The installer from Netscape (Java, etc) fails with an unknown error.
+Q: The installation of Netscape (Java, etc) seems to work, but the program
+   isn't working correctly.
+   
+A: The problem isn't with the programs, but with the installer itself.
+   Unfortunately, the IBM installer (feature installer) always assumes that
+   the user and system INI files are located in the \OS2 directory of the boot
+   drive. This is obviously a perfect example of bad programming...
+   What this means is that if you don't have OS2.INI and/or OS2SYS.INI in the
+   \OS2 directory, the installer will most probably crash.
+   Even if you have OS2.INI and OS2SYS.INI in the \OS2 directory, you may end
+   up with a corrupted installation, if you're installing from another desktop
+   (that is, a desktop that uses INIs from another location).
+   The work-around is to always have a set of INIs in \OS2. After the
+   installation, look in these INIs to see if the installer has written
+   something there, and copy those values to your true INIs.
+
+-----------------------------------------------------------------------------

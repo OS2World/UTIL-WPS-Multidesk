@@ -1,0 +1,143 @@
+.. ------------------------------------------------------------
+.1 [=BASETITLE] configuration samples
+.. ------------------------------------------------------------
+.an SAMPLES
+.
+.su V30 u 1
+
+.. ------------------------------------------------------------
+.2 Sample configuration file
+.. ------------------------------------------------------------
+.an SAMPLE_CFG
+.
+.fo off
+                              Sample Configuration File
+
+## -- MuDesk configuration file --
+##
+## !!!! Don't put spaces around the "=" sign !!!!
+##
+##-----------------------------------------------------------------------------
+## The system will automatically login this user after default__user__timeout
+## seconds, if this variable is set. You can comment it out, or leave it blank
+## to disable automatic login.
+## Note that setting the timeout to 0 will also disable auto-login.
+##
+default__user=cris
+default__user__timeout=20
+##
+##-----------------------------------------------------------------------------
+## The root user is the user that has access to all the log files, the
+## config files, etc. Here you tell how the root user is named. Default is
+## 'root'.
+##         !! IT IS NOT POSSIBLE TO SET DEFAULT__USER = ROOT__USER !!
+##
+root__user=root
+##
+##-----------------------------------------------------------------------------
+## If this is set to YES, then MuDesk will NOT ask to enter a password. Also,
+## this enables starting the default__user by simply pressing "ENTER" when the
+## login prompt shows. Default is NO.
+## Note however that log files, config files, etc are still locked to everyone
+## but the root__user (which will always require a password).
+##
+relaxed__security=NO
+##
+##-----------------------------------------------------------------------------
+## After ssaver__timeout seconds without user interaction, the screen will be
+## blanked. Note that screen blanking is never disabled. If you do not specify
+## it, it will be set to the default of 120 seconds.
+##
+ssaver__timeout=60
+##
+##-----------------------------------------------------------------------------
+## If this is set to YES, all logins will be logged to the log__users__file file.
+## Note that this file will be readable only by the root user.
+##
+log__users=YES
+log__users__file=E:\SysBoot.Log
+##
+##-----------------------------------------------------------------------------
+## This is where the users tree is created by default. This is only used by
+## administration program.
+## You can override this setting  on a one-by-one basis, by using the
+## administration program.
+##
+users__tree=E:\Users
+##
+## -- end of cfg file --
+.fo on
+
+
+.. ------------------------------------------------------------
+.2 list sample
+.. ------------------------------------------------------------
+.
+_*List created by IPF code:*_
+.fo off
+ :ul compact.
+ :li.this is the first level 1 item
+ :li.this is the second level 1 item
+ :ul compact.
+ :li.this is the first level 2 item
+ :li.this is the second level 2 item
+ :li.this is the third level 2 item
+ :eul.
+ :eul.
+.fo on
+
+_*List created by [=BASETITLE] code:*_
+.fo off
+ .ul compact
+ - this is the first level 1 item
+ - this is the second level 1 item
+   - this is the first level 2 item
+   - this is the second level 2 item
+   - this is the third level 2 item
+
+.fo on
+_*resulting list:*_
+.ul compact
+- this is the first level 1 item
+- this is the second level 1 item
+  - this is the first level 2 item
+  - this is the second level 2 item
+  - this is the third level 2 item
+
+.. ------------------------------------------------------------
+.2 parameter list sample
+.. ------------------------------------------------------------
+.
+_*Parameter list created by IPF code:*_
+.fo off
+ :parml compact.
+ :pt.:hp2.item1:ehp2.
+ :pd.this is description for item 1
+ :pt.:hp2.item2:ehp2.
+ :pd.this is description for item 2
+ :pt.:hp2.item3:ehp2.
+ :pd.this is description for item 3
+ :eul.
+.fo on
+
+_*Parameter list created by [=BASETITLE] code:*_
+.fo off
+ .pl compact bold
+ - item1
+ = this is description for item 1
+ - item2
+ = this is description for item 2
+ - item3
+ = this is description for item 3
+
+.fo on
+_*resulting parameter list:*_
+.pl compact bold
+- item1
+= this is description for item 1
+- item2
+= this is description for item 2
+- item3
+= this is description for item 3
+
+

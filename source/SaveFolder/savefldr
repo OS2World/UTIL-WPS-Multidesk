@@ -1,0 +1,11 @@
+# NMAKE-compatible MAKE file
+# This uses the IBM C Set/2 compiler and LINK386.
+
+savefldr.dll:     savefldr.obj  savefldr.def
+         LINK386 savefldr.obj,SAVEFLDR.DLL,,REXX,savefldr.def;
+
+savefldr.obj:     savefldr.c
+         icc -c -Ge- savefldr.c
+
+
+

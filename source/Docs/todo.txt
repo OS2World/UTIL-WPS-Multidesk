@@ -1,0 +1,23 @@
+General:
+
+   Integrate SaveFolder. >IN_PROGRESS<
+   Rewrite documentation.
+
+
+Installation:
+
+   (None)
+   
+
+Login program:
+
+   Have different default users based on time of the day. >IN_PROGRESS<
+    
+
+Admin program:
+
+   Implement the "manage desktops" capability (move/reinit/delete user desktops).
+   Implement copying a desktop (should go in "manage desktops")
+   Implement copying some folders (leave it to the user, with SaveFolder)
+   Better behaviour for the log window. >PARTLY_DONE<
+   Move the window with mouse (low prio).    

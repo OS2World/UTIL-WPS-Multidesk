@@ -1,0 +1,36 @@
+/* Post-Login Rexx script file for MultiDesk */
+
+BootDrive = arg(1)
+User = arg(2)
+UserIni = arg(3)
+SystemIni = arg(4)
+UTreePath = arg(5)
+
+/* --- !! Do not edit/delete the lines of the section below here.  !! --- */
+
+if Right(UTreePath, 1) \= '\' then
+    UTreePath = UTreePath||'\'
+
+/* Copy current user MMPM.INI file to MMOS2 directory, if MMedia installed */
+EnvMMBase = Strip(Value('MMBASE',, 'OS2ENVIRONMENT'))
+if Right(EnvMMBase, 1) = ';' then EnvMMBase = Left(EnvMMBase, Length(EnvMMBase) - 1)
+if (EnvMMBase \= '') then do
+    if Right(EnvMMBase, 1) \= '\' then EnvMMBase = EnvMMBase || '\'
+    MMINIPath = UTreePath || User || '\MMOS2'
+    '@' || BootDrive || ':\os2\attrib.exe -S -R ' || EnvMMBase || 'mmpm.ini'
+    '@del ' || EnvMMBase || 'mmpm.ini 1> nul 2> nul'
+    '@copy ' || MMINIPath || '\mmpm.ini ' || EnvMMBase || ' 1> nul 2> nul'
+    '@' || BootDrive || ':\os2\attrib.exe +S +R ' || EnvMMBase || 'mmpm.ini'
+end
+
+/* Copy current user's WarpCenter to x:\os2\dll, where it belongs */
+OrgPath = UTreePath || User || '\WC'
+'@del ' || BootDrive || ':\OS2\DLL\dock*.cfg 1> nul 2> nul'
+'@del ' || BootDrive || ':\OS2\DLL\SCENTER.CFG 1> nul 2> nul'
+'@copy ' || OrgPath || '\dock*.cfg ' || BootDrive || ':\OS2\DLL 1> nul 2> nul'
+'@copy ' || OrgPath || '\SCENTER.CFG ' || BootDrive || ':\OS2\DLL 1> nul 2> nul'
+
+/* --- !! End of the non-editable section. You can add/edit below. !! --- */
+
+exit
+

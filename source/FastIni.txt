@@ -1,0 +1,6 @@
+FastIni is a freely distributable DLL from Dennis Bareis. It is repackaged
+here as a convenience to the user of MultiDesk.
+
+The original author can be reached at:
+
+	http://www.labyrinth.net.au/~dbareis/index.htm

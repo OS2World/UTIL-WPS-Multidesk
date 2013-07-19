@@ -1,0 +1,137 @@
+.. ----------------------------------------
+.1 Usage
+.. ----------------------------------------
+.an USAGE
+.
+Select one of the following topics:
+.su V30 u
+
+.. ----------------------------------------
+.2 The [=BASETITLE] configuration file
+.. ----------------------------------------
+.an USAGE_CFGFILE
+.
+[=TITLE] must be initially set up with a small text configuration file,
+named multidesk.cfg. It contains a few options that you may want to customize
+for your system. If not customized, [=TITLE] uses sensible defaults.
+
+The configuration file is well documented with internal comments, however here
+is a quick reference to the supported keys:
+.ul
+- [.FN_KEY_DEFUSER default__user]
+- [.FN_KEY_DEFUSER_TIMEOUT default__user__timeout]
+- [.FN_KEY_ROOT root__user]
+- [.FN_KEY_RELAXED relaxed__security]
+- [.FN_KEY_SSAVER ssaver__timeout]
+- [.FN_KEY_LOGUSR log__users]
+- [.FN_KEY_LOGFILE log__users__file]
+- [.FN_KEY_USRTREE users__tree]
+
+Here is a sample configuration [.SAMPLE_CFG file].
+
+.. + + + + + + + + + + + + + + + + + + + +
+.fn
+.an FN_KEY_DEFUSER
+.
+The system will automatically login this
+user after default__user__timeout seconds,
+if this variable is set. You can comment
+it out, or leave it blank to disable
+automatic login.
+
+.. + + + + + + + + + + + + + + + + + + + +
+.fn
+.an FN_KEY_DEFUSER_TIMEOUT
+.
+The system will automatically login
+#default__user# after this number of seconds,
+if this variable is set. You can set this
+variable to 0 to disable automatic login.
+
+.. + + + + + + + + + + + + + + + + + + + +
+.fn
+.an FN_KEY_ROOT
+.
+The root user (administrator) is the user
+that has access to all the log files, the
+config files, etc. Here you tell how this
+user is named. Default is 'root'.
+
+*Note that it is not possible to set default__user = root__user*
+
+.. + + + + + + + + + + + + + + + + + + + +
+.fn
+.an FN_KEY_RELAXED
+.
+If this is set to YES, then [=TITLE] will
+*not* ask to enter a password. Also, this
+enables starting the #default__user# by simply
+pressing *ENTER* when the login prompt
+shows. Default is *NO*.
+
+Note however that log files, config files,
+etc. are still locked to everyone but the
+#root__user# (_which will always require a
+password_).
+
+.. + + + + + + + + + + + + + + + + + + + +
+.fn
+.an FN_KEY_SSAVER
+.
+After this number of seconds without user
+interaction, the screen will be blanked.
+Screen blanking is never disabled. If you
+do not specify it, it will be set to the
+default of 120 seconds.
+
+.. + + + + + + + + + + + + + + + + + + + +
+.fn
+.an FN_KEY_LOGUSR
+.
+If this is set to *YES*, all logins will
+be logged to the #log__users__file# file.
+
+Note that this file will be readable only
+by the #root__user#.
+
+.. + + + + + + + + + + + + + + + + + + + +
+.fn
+.an FN_KEY_LOGFILE
+.
+All logins will be logged to this file,
+but only if #log__users# is set to *YES*.
+
+Note that this file will be readable only
+by the #root__user#.
+
+.. + + + + + + + + + + + + + + + + + + + +
+.fn
+.an FN_KEY_USRTREE
+.
+This is where the [.USAGE_MUADMIN users tree] is created
+by default. This is only used by the
+administration program.
+You can override this setting on a
+one-by-one basis, by using the
+administration program.
+
+
+.. ----------------------------------------
+.2 The MuAdmin administration program
+.. ----------------------------------------
+.an USAGE_MUADMIN
+.
+*MuAdmin* is the administration program, used by the administrator
+to manage the users that can log into the system.
+
+With *MuAdmin* you can:
+.ul
+- Create new users
+    - with a default user tree
+    - with a custom user tree
+- Create new desktops
+- Change a user's parameters (password, INI files, etc.)
+- Delete users
+- Migrate INI settings among desktops
+
+

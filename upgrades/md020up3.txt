@@ -1,0 +1,108 @@
+MultiDesk 0.2.0 upgrade 3
+=========================
+
+This is the third upgrade to the MultiDesk 0.2.0 distribution. This upgrades
+a lot of components, so I think a new distribution is approaching (as soon
+as I find time to fix a couple things and assemble it).
+
+As always, the archive is "incremental", that is: it includes the newly 
+updated files AND all the updated files from upgrade 1 and 2.
+
+Installation:
+
+ Simply copy all the updated files over the old ones, and add the new ones.
+ 
+ Before rebooting, add an \MMOS2 subdirectory the every user directory,
+ then copy there your MMPM.INI file (if you want to have the same sound
+ settings for all users), or build a new MMPM.INI file from the template
+ (MAKEINI MMPM.INI mmit.rc) and put it there.
+
+
+Changes:
+	
+    - Incorporated the changes from Pete Brown regarding Sound Schemes
+      switching among users (modified to verify MMPM installation).
+
+    - Changes in all other modules (MuAdmin, Installation, scripts, etc.)
+      to behave correctly with the new MMOS2 directory in the user tree.
+
+    - Changes to MuAdmin to use the MMBASE environment variable, instead
+      of the hard-coded x:\MMOS2 path (this was a long overdue fix, that
+      I always postponed due to my laziness ;^))
+      
+    - Created a new template for MMPM.INI: now every new user gets a
+      standard MMPM.INI file, with and empty sound scheme and system
+      sounds disabled.
+      
+    - Fixed a bug where the user tree path could not be determined
+      by the pre-login script (unless it was the standard x:\Users).
+      
+    - Added a \Docs\contrib subdirectry to hold user-contributed scripts
+      (for now it only contains scripts by Pete Brown).
+      
+    - User environment files can now contain blank lines, and can contain
+      comments (lines beginning with '#'). Mudesk now does a (little) bit
+      of checking over the lines to see if they are suitable for the
+      environment. If you type "rem goofy=minnie" MuDesk will ignore it,
+      NOT because of the "rem", but because of the wrong format (a space
+      before the "=").
+
+
+Enjoy! :-)
+
+       Cris
+
+      
+
+-----------------------------------------------------------------------------
+Older upgrades:
+-----------------------------------------------------------------------------
+
+MultiDesk 0.2.0 upgrade 2
+=========================
+
+This is the second upgrade to the MultiDesk 0.2.0 distribution. It includes
+the new MultiDesk Administrator, that supports and generates encrypted
+passwords.
+
+It is a drop-in replacement of MuAdmin.exe and AuxFuncs.dll.
+
+Note that the archive is "incremental", that is: it includes the newly 
+updated files AND all the updated files from upgrade 1.
+
+Enjoy! :-)
+
+       Cris
+
+       
+-----------------------------------------------------------------------------
+
+
+MultiDesk 0.2.0 upgrade 1
+=========================
+
+This is the first upgrade to the MultiDesk 0.2.0 distribution. It supports
+standard crypt()-encoded passwords in the mudesk.dat file.
+
+It is a drop-in replacement of MuDesk.exe and FAQ.txt. 
+
+Since the new MuDesk Administrator, which supports encoding of passwords, 
+still is not ready, I'm providing a command line tool (crypt.exe) which 
+encrypts a password. You can then edit the mudesk.dat file replacing the
+clear-text password with the encrypted one, or you can use the MultiDesk
+Adminitrator, and cut and paste the resulting encoded password in the
+password field.
+
+The new MultiDesk Administrator will be available shortly.
+
+BE CAREFUL: don't reboot your box with the new mudesk.exe if you haven't
+changed the mudesk.dat file: MuDesk would try to interpret the unencrypted
+password as an encrypted one, and you wouldn't be able to login anymore.
+
+ONE LAST NOTE: the standard crypt() algorithm only supports password lengths
+up to eight characters. If you use a longer password, any password beginning
+with the same eight characters would match.
+
+Enjoy! :-)
+
+       Cris

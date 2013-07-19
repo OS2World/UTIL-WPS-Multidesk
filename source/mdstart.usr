@@ -1,0 +1,25 @@
+/* Post-Login Rexx script file for MultiDesk */
+
+BootDrive = arg(1)
+User = arg(2)
+UserIni = arg(3)
+SystemIni = arg(4)
+UTreePath = arg(5)
+
+/* --- !! This part is for the multi-user management of WarpCenter !! --- */
+/* --- !! Do not delete it if you're interested in having multiple !! --- */
+/* --- !! WarpCenter configurations.                               !! --- */
+
+if Right(UTreePath, 1) \= '\' then
+    UTreePath = UTreePath||'\'
+
+OrgPath = UTreePath || User || '\WC'
+'@del ' || BootDrive || ':\OS2\DLL\dock*.cfg 1> nul 2> nul'
+'@del ' || BootDrive || ':\OS2\DLL\SCENTER.CFG 1> nul 2> nul'
+'@copy ' || OrgPath || '\dock*.cfg ' || BootDrive || ':\OS2\DLL 1> nul 2> nul'
+'@copy ' || OrgPath || '\SCENTER.CFG ' || BootDrive || ':\OS2\DLL 1> nul 2> nul'
+
+/* --- !!     End of the multi-user WarpCenter management part     !! --- */
+
+exit
+

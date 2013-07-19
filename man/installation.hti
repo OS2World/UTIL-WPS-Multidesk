@@ -1,0 +1,20 @@
+.. ----------------------------------------
+.1 Installation
+.. ----------------------------------------
+.an INSTALLATION
+
+[=TITLE] comes as a self-installing *WarpIN* package, hence you need to
+have *WarpIN* installed.
+
+To download the latest release of WarpIN, go to:
+.sl compact
+- [http://www.xworkplace.org]
+
+Once *WarpIN* is installed, it will take care of all the installation steps, and
+will let you uninstall MultiDesk should you wish to.
+
+*WarpIN* holds a complete list of all installed packages on your system. To learn
+more about *WarpIN* go to
+.sl compact
+- [http://warpin.netlabs.org]
+

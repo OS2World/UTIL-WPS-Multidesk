@@ -1,0 +1,613 @@
+/* uit.rc: (U)ser (I)ni (T)emplate resource file for use by ÊDesk     */
+/* ------------------------------------------------------------------ */
+/* This is based on the original INI.RC file from OS/2 Warp 4 (US)    */
+
+/**********************************************************************/
+/* ÊDesk - Multiple desktops/users application for OS/2               */
+/*         Copyright 2000-2001 Cristiano Guadagnino                   */
+/**********************************************************************/
+
+CODEPAGE 850
+
+STRINGTABLE
+BEGIN
+
+  ""
+  ""
+  ""
+  ""
+  ""
+  ""
+  ""
+  ""
+  ""
+  ""
+
+  "PM_ControlPanel"    "BorderWidth"      "4"
+  "PM_ControlPanel"    "LogoDisplayTime"  "2000"
+  "PM_ASSOC_TYPE"      "Plain Text"            ""
+  "PM_ASSOC_TYPE"      "OS/2 Command File"            ""
+  "PM_ASSOC_TYPE"      "DOS Command File"            ""
+  "PM_ASSOC_TYPE"      "Executable"            ""
+  "PM_ASSOC_TYPE"      "Metafile"            ""
+  "PM_ASSOC_TYPE"      "PIF file"            ""
+  "PM_ASSOC_TYPE"      "Bitmap"            ""
+  "PM_ASSOC_TYPE"      "Icon"            ""
+  "PM_ASSOC_TYPE"      "Binary Data"            ""
+  "PM_ASSOC_TYPE"      "Dynamic Link Library"            ""
+  "PM_ASSOC_TYPE"      "C Code"            ""
+  "PM_ASSOC_TYPE"      "Pascal Code"            ""
+  "PM_ASSOC_TYPE"      "BASIC Code"            ""
+  "PM_ASSOC_TYPE"      "COBOL Code"            ""
+  "PM_ASSOC_TYPE"      "FORTRAN Code"            ""
+  "PM_ASSOC_TYPE"      "Assembler Code"            ""
+  "PM_ASSOC_TYPE"      "Resource File"            ""
+  "PM_ASSOC_TYPE"      "Printer-specific"            ""
+
+  "PM_DEVICE_DRIVERS"  "IBMNULL"            "<@@boot_drive@@>\OS2\DLL\IBMNULL\IBMNULL.DRV"
+  "PM_Font_Drivers"    "PMATM"              "\OS2\DLL\PMATM.DLL"
+  "PM_Font_Drivers"    "PMUNIF"             "\OS2\DLL\PMUNIF.DLL"
+  "PM_Font_Drivers"    "TRUETYPE"           "\OS2\DLL\TRUETYPE.DLL"
+  "PM_Fonts"           "SYSMONO"            "\OS2\DLL\SYSMONO.FON"
+  "PM_Fonts"           "COURIER"            "\OS2\DLL\COURIER.FON"
+  "PM_Fonts"           "HELV"               "\OS2\DLL\HELV.FON"
+  "PM_Fonts"           "TIMES"              "\OS2\DLL\TIMES.FON"
+  "PM_Fonts"           "COURIERI"           "\OS2\DLL\COURIERI.FON"
+  "PM_Fonts"           "HELVI"              "\OS2\DLL\HELVI.FON"
+  "PM_Fonts"           "TIMESI"             "\OS2\DLL\TIMESI.FON"
+  "PM_Fonts"           "MARKSYM.OFM"        "\PSFONTS\MARKSYM.OFM"
+  "PM_Fonts"           "HELV.OFM"           "\PSFONTS\HELV.OFM"
+  "PM_Fonts"           "HELVB.OFM"          "\PSFONTS\HELVB.OFM"
+  "PM_Fonts"           "HELVBI.OFM"         "\PSFONTS\HELVBI.OFM"
+  "PM_Fonts"           "HELVI.OFM"          "\PSFONTS\HELVI.OFM"
+  "PM_Fonts"           "COUR.OFM"           "\PSFONTS\COUR.OFM"
+  "PM_Fonts"           "COURB.OFM"          "\PSFONTS\COURB.OFM"
+  "PM_Fonts"           "COURBI.OFM"         "\PSFONTS\COURBI.OFM"
+  "PM_Fonts"           "COURI.OFM"          "\PSFONTS\COURI.OFM"
+  "PM_Fonts"           "SYMB.OFM"           "\PSFONTS\SYMB.OFM"
+  "PM_Fonts"           "TNR.OFM"            "\PSFONTS\TNR.OFM"
+  "PM_Fonts"           "TNRB.OFM"           "\PSFONTS\TNRB.OFM"
+  "PM_Fonts"           "TNRBI.OFM"          "\PSFONTS\TNRBI.OFM"
+  "PM_Fonts"           "TNRI.OFM"           "\PSFONTS\TNRI.OFM"
+  "SYS_DLLS"           "LoadOneTime"        "REXXINIT"
+  "SYS_DLLS"           "LoadPerProcess"     "PMCTLS"
+  "PM_SPOOLER"         "QUEUE"             "LPT1Q;"
+  "PM_SPOOLER"         "PRINTER"           "PRINTER1;"
+
+  "PM_National"  "iCountry"   "1" /* Country code (phone ID of country)*/
+  "PM_National"  "iDate"      "0" /* Date mode (0:MDY, 1:DMY, 2:YMD) */
+  "PM_National"  "iCurrency"  "0" /* Currency mode 0: prefix, no sep */
+                                  /*    1: suffix, no separation     */
+                                  /*    2: prefix, 1 CHAR separation */
+                                  /*    3: suffix, 1 CHAR separation */
+  "PM_National"  "iDigits"       "2" /* Signif Decimal digits in Currency */
+  "PM_National"  "iTime"         "0" /* time mode (0=12 hours clock, 1=24)*/
+  "PM_National"  "iLzero"        "0"  /* Leading zeros (0: no, 1: yes)   */
+  "PM_National"  "s1159"         "AM" /* Trailing string 0:00 to 11:59   */
+  "PM_National"  "s2359"         "PM" /* Trailing string 12:00 to 23:59  */
+  "PM_National"  "sCurrency"     "$"  /* Currency Symbol string          */
+  "PM_National"  "sThousand"     ","  /* Thousands separator string      */
+  "PM_National"  "sDecimal"      "."  /* Decimal separator string        */
+  "PM_National"  "sDate"         "-"  /* Date separator string           */
+  "PM_National"  "sTime"         ":"  /* time separator string           */
+  "PM_National"  "sList"         ","  /* List separator string.          */
+  "PM_National"  "iMeasurement"  "1"  /* 1=English, 2=Metric, 3=Points, 4=Picaa */
+
+  "PM_IBMBGA"    "ALTSYSFONT" "0"  /* For 8514 adapter only */
+  "PM_IBMBGA"    "FASTSS"     "0"  /* For 8514 adapter only */
+
+  "EPM"          "EPMIniPath" "\OS2\EPM.INI"
+
+  "WINOS2"       "PM_GlobalWindows31Settings" "DPMI_MEMORY_LIMIT=64;PROGTYPE=PROG_31_STD;KBD_ALTHOME_BYPASS=1;VIDEO_SWITCH_NOTIFICATION=1;VIDEO_8514A_XGA_IOTRAP=0;WIN_CLIPBOARD=1"
+
+  "Shield"       "fMaximize" "1"
+
+  "PM_Workplace:InstallGroups" "1" "1"
+
+  "PM_InstallObject" "Desktop;WPDesktop;<@@fully_qualified_user_desktop_pathname@@>;PRESERVEOLD" "LOCKUPBACKGROUND=\os2\bitmap\wserver.bmp,s,1;ICONSHADOWCOLOR=182 182 182;TREESHADOWCOLOR=182 182 182;DETAILSSHADOWCOLOR=182 182 182;OBJECTID=<WP_DESKTOP>"
+
+
+  /* remove PMDDE object from workplace */
+  "PM_InstallObject" "Deleted;WPProgram;<WP_TOOLS>;DELETE" "OBJECTID=<WP_PMDDE>"
+END
+
+STRINGTABLE REPLACEMODE
+BEGIN
+  "PM_SystemFonts"     "WindowTitles"       "9.WarpSans Bold"
+  "PM_SystemFonts"     "Menus"              "9.WarpSans Bold"
+  "PM_SystemFonts"     "IconText"           "9.WarpSans"
+  "PM_SystemFonts"     "WindowText"         "9.WarpSans"
+  "PM_SystemFonts"     "DefaultFont"        "10.System Proportional"
+
+  "PM_Workplace"       "TabTextFont"        "9.WarpSans"
+  "PM_Workplace"       "ToolbarFont"        "9.WarpSans"
+
+  "PM_SystemBackground" "DefaultDesktopBackground" "(none)"
+
+  "PM_INFO"            "Version"            "4.0"
+  "PM_IMAGECNV"        "IMAGECNVPATH"       "\OS2\IMAGECNV"
+
+  /* During an install, reset the objects to be restarted on boot to none  */
+  /* This will keep the old desktop, and any programs running prior to the */
+  /* shutdown before the install from coming up during the install.        */
+  "PM_WorkPlace:Restart" "Objects" " "
+
+  /* The objects specified in this section are created on both the regular and maintenance desktop structures */
+  "PM_InstallObject" "Nowhere;WPVault;<@@fully_qualified_user_desktop_pathname@@>;PRESERVEOLD"  "OBJECTID=<WP_NOWHERE>"
+  "PM_InstallObject" "View;WPProgram;<WP_NOWHERE>;UPDATE" "EXENAME=<@@boot_drive@@>\OS2\VIEW.EXE;ASSOCFILTER=*.INF;NOTVISIBLE=YES;OBJECTID=<WP_VIEWINF>"
+
+  /* Objects that are directly on the desktop ... */
+  /* The key PM_MigrateFolder is used to handshake with migrate */
+  "PM_InstallObject" "OS/2 System;WPFolder;<WP_DESKTOP>;PRESERVEOLD" "HELPPANEL=4002;NODELETE=YES;ICONRESOURCE=61 PMWP;ICONNRESOURCE=1,35,PMWP;ICONPOS=8 84;ICONVIEWPOS=18 45 70 38;OBJECTID=<WP_OS2SYS>"
+  "PM_MigrateFolder" "<WP_OS2SYS>"  " "
+  "PM_InstallObject" "Assistance Center;WPFolder;<WP_DESKTOP>;PRESERVEOLD" "ICONRESOURCE=82 PMWP;ICONNRESOURCE=1,83,PMWP;ICONPOS=8 66;ICONVIEWPOS=10 30 69 50;OBJECTID=<WP_ASSISTANCE>"
+  "PM_MigrateFolder" "<WP_ASSISTANCE>"  " "
+  "PM_InstallObject" "Connections;WPFolder;<WP_DESKTOP>;PRESERVEOLD" "ICONRESOURCE=87 PMWP;ICONPOS=8 50;DEFAULTVIEW=TREE;OBJECTID=<WP_CONNECTIONSFOLDER>"
+  "PM_MigrateFolder" "<WP_CONNECTIONSFOLDER>"  " "
+  "PM_InstallObject" "Programs;WPFolder;<WP_DESKTOP>;PRESERVEOLD" "ICONRESOURCE=92 PMWP;ICONPOS=8 34;OBJECTID=<WP_PROGRAMSFOLDER>"
+  "PM_InstallObject" "Shredder;WPShredder;<WP_DESKTOP>;PRESERVEOLD" "ICONPOS=88 10;OBJECTID=<WP_SHRED>;LOCKEDINPLACE=YES"
+
+  /* Objects that are in the Connections folder on the desktop ... */
+  "PM_InstallObject" "Network;WPNetwork;<WP_CONNECTIONSFOLDER>;PRESERVEOLD" "HELPPANEL=30000;NODELETE=YES;DEFAULTVIEW=ICON;OBJECTID=<WP_NETWORK>"
+  "PM_InstallObject" "Printers;WPFolder;<WP_CONNECTIONSFOLDER>;PRESERVEOLD" "ICONRESOURCE=93 PMWP;ICONNRESOURCE=1,94,PMWP;DEFAULTVIEW=ICON;OBJECTID=<WP_PRINTERSFOLDER>"
+  "PM_InstallObject" "Drives;WPDrives;<WP_CONNECTIONSFOLDER>;RELOCATE" "ALWAYSSORT=YES;NODELETE=YES;DEFAULTVIEW=ICON;OBJECTID=<WP_DRIVES>"
+
+  /* Objects that are in the OS/2 system folder on the desktop ... */
+  "PM_InstallObject" "System Setup;WPFolder;<WP_OS2SYS>;PRESERVEOLD" "HELPPANEL=1220;ICONRESOURCE=59 PMWP;ICONNRESOURCE=1,15,PMWP;OBJECTID=<WP_CONFIG>"
+  "PM_InstallObject" "Command Prompts;WPFolder;<WP_OS2SYS>;PRESERVEOLD" "HELPPANEL=8008;ICONRESOURCE=37,PMWP;ICONNRESOURCE=1,38,PMWP;OBJECTID=<WP_PROMPTS>"
+  "PM_InstallObject" "Minimized^Window Viewer;WPMinWinViewer;<WP_OS2SYS>;RELOCATE" "ALWAYSSORT=YES;OBJECTID=<WP_VIEWER>"
+  "PM_InstallObject" "Startup;WPStartup;<WP_OS2SYS>;RELOCATE" "HELPPANEL=8002;NODELETE=YES;OBJECTID=<WP_START>"
+  "PM_InstallObject" "Templates;WPTemplates;<WP_OS2SYS>;PRESERVEOLD" "HELPPANEL=15680;NODELETE=YES;OBJECTID=<WP_TEMPS>"
+  "PM_InstallObject" ";WPShadow;<WP_OS2SYS>;PRESERVEOLD" "SHADOWID=<WP_DRIVES>;OBJECTID=<WP_DRIVESSHADOW>"
+
+  /* Objects that are in the Printers folder in connections folder on the desktop */
+  "PM_InstallObject" "Printer;PDView;<WP_PRINTERSFOLDER>;PRESERVEOLD" "Printer;OBJECTID=<WP_PDVIEW>"
+
+  /* Objects that are in the assistance center folder on the desktop ... */
+  "PM_InstallObject" "Information;WPFolder;<WP_ASSISTANCE>;PRESERVEOLD" "DEFAULTVIEW=TREE;HELPPANEL=13092;ICONRESOURCE=60 PMWP;OBJECTID=<WP_INFO>;SHOWALLINTREEVIEW=YES"
+
+  /* Objects that are in the Programs folder on the desktop ... */
+  "PM_InstallObject" "Utilities;WPFolder;<WP_PROGRAMSFOLDER>;PRESERVEOLD" "HELPPANEL=13090;OBJECTID=<WP_TOOLS>"
+  "PM_MigrateFolder" "<WP_TOOLS>"  " "
+
+  /* Objects that are in the system setup folder in OS/2 system folder on the desktop */
+  "PM_InstallObject" "System Clock;WPClock;<WP_CONFIG>;RELOCATE" "OBJECTID=<WP_CLOCK>"
+  "PM_InstallObject" "Keyboard;WPKeyboard;<WP_CONFIG>;RELOCATE" "OBJECTID=<WP_KEYB>"
+  "PM_InstallClass" "WPStickMouse" "WPSTKMOU"
+  "PM_InstallObject" "Mouse;WPStickMouse;<WP_CONFIG>;RELOCATE" "OBJECTID=<WPSTK_MOUSE>"
+  "PM_InstallObject" "Touch;WPTouch;<WP_CONFIG>;RELOCATE" "OBJECTID=<WP_TOUCH>"
+  "PM_InstallObject" "System;WPSystem;<WP_CONFIG>;RELOCATE" "HELPPANEL=9259;OBJECTID=<WP_SYSTEM>"
+  "PM_InstallObject" "Spooler;WPSpool;<WP_CONFIG>;RELOCATE" "OBJECTID=<WP_SPOOL>"
+  "PM_InstallObject" "Add Programs;WPProgram;<WP_CONFIG>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\INSTALL\MIGRATE.EXE;HELPPANEL=4508;OBJECTID=<WP_MIGAPP>"
+  "PM_InstallObject" "Sound;WPSound;<WP_CONFIG>;RELOCATE" "OBJECTID=<WP_SOUND>"
+  "PM_InstallObject" "Hardware Manager;WPHwManager;<WP_CONFIG>;RELOCATE" "OBJECTID=<WP_HWMGR>"
+  "PM_InstallObject" "Install/Remove;WPFolder;<WP_CONFIG>;PRESERVEOLD" "ICONRESOURCE=90 PMWP;ICONNRESOURCE=1,91,PMWP;OBJECTID=<WP_INSTREMFOLDER>"
+  "PM_InstallObject" "Locale;WPProgram;<WP_CONFIG>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\GLOCALE.EXE;ICONFILE=<@@boot_drive@@>\OS2\GLOCALE.ICO;OBJECTID=<WP_LOCALE>"
+  "PM_InstallObject" "Language Viewer;BDview;<WP_CONFIG>;RELOCATE" "OBJECTID=<BDview>"
+
+  /* Objects that are in the command prompts folder in the OS/2 system folder on the desktop */
+  "PM_InstallObject" "OS/2 Full Screen;WPProgram;<WP_PROMPTS>;PRESERVEOLD" "EXENAME=*;PROGTYPE=FULLSCREEN;HELPPANEL=8009;CCVIEW=YES;PARAMETERS=%;OBJECTID=<WP_OS2FS>"
+  "PM_InstallObject" "OS/2 Window;WPProgram;<WP_PROMPTS>;PRESERVEOLD" "EXENAME=*;PROGTYPE=WINDOWABLEVIO;HELPPANEL=8010;CCVIEW=YES;PARAMETERS=%;OBJECTID=<WP_OS2WIN>"
+
+  /* Objects that are in the utilities folder in the programs folder on the desktop */
+  "PM_InstallObject" "OS/2 System Editor;WPProgram;<WP_TOOLS>;PRESERVEOLD"  "EXENAME=<@@boot_drive@@>\OS2\E.EXE;PROGTYPE=PM;HELPPANEL=9289;ASSOCTYPE=Plain Text,OS/2 Command File,DOS Command File,,;ASSOCFILTER=*.DOC,*.TXT,*.HTM,*.HTML,;OBJECTID=<WP_SYSED>"
+
+  /* Objects that are in the information folder in the assistance center folder on the desktop */
+  "PM_InstallObject" "Online Information Overview;WPFolder;<WP_INFO>;PRESERVEOLD" "DEFAULTVIEW=ICON;OBJECTID=<WP_INFOOVERFOLDER>;SHOWALLINTREEVIEW=YES"
+  "PM_InstallObject" "Read Me;WPFolder;<WP_INFO>;PRESERVEOLD" "DEFAULTVIEW=ICON;OBJECTID=<WP_READMEFOLDER>;SHOWALLINTREEVIEW=YES"
+  "PM_InstallObject" "Help Index;Mindex;<WP_INFO>;PRESERVEOLD" "INDEX=HELP;NODELETE=YES;OBJECTID=<WP_MINDEX>"
+
+  /* Objects that are in the online information overview folder in the information folder in the assistance center folder on the desktop... */
+  "PM_InstallObject" "Glossary;Mindex;<WP_INFOOVERFOLDER>;PRESERVEOLD" "INDEX=GLOSSARY;NODELETE=YES;OBJECTID=<WP_GLOSS>"
+  "PM_InstallObject" "Using Online Information;WPProgram;<WP_INFOOVERFOLDER>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\VIEW.EXE;PARAMETERS=ONLINE.INF;OBJECTID=<WP_ONLINE>"
+
+  /* Objects that are in the readme folder in the information folder in the assistance center folder on the desktop... */
+  "PM_InstallObject" "ReadMe;WPShadow;<WP_READMEFOLDER>;PRESERVEOLD" "SHADOWID=<@@boot_drive@@>\readme.txt;OBJECTID=<WP_RDME>"
+
+  /* Objects that are in the install/remove folder in the system setup folder in the os2 system folder on the desktop... */
+  "PM_InstallObject" "Selective Install;WPProgram;<WP_INSTREMFOLDER>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\INSTALL\INSTALL.EXE;HELPPANEL=12220;OBJECTID=<WP_INST>"
+  "PM_InstallObject" "Device Driver Install;WPProgram;<WP_INSTREMFOLDER>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\INSTALL\DDINSTAL.EXE;HELPPANEL=12221;OBJECTID=<WP_DDINST>"
+  "PM_InstallObject" "Selective Uninstall;WPProgram;<WP_INSTREMFOLDER>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\INSTALL\UNINSTAL.EXE;PROGTYPE=PM;HELPPANEL=32162;OBJECTID=<WP_UNINST>"
+
+  /* Objects that are in the multimedia folder on the desktop... 2001-03-05 cris */
+  "PM_InstallObject"  "Multimedia;WPFolder;<WP_PROGRAMSFOLDER>;PRESERVEOLD"  "NOPRINT=YES;DEFAULTVIEW=CONTENTS;OBJECTID=<MMPM2_FOLDER>;"
+  "PM_InstallObject"  "Movies;WPShadow;<MMPM2_FOLDER>"  "NOPRINT=YES;DEFAULTVIEW=UNKNOWN;HELPPANEL=48033;HELPLIBRARY=MMPARTS.HLP;SHADOWID=<WP_MOVIES>;OBJECTID=<MMPM2_MOVIES>;"
+  "PM_InstallObject"  "Bitmaps;WPShadow;<MMPM2_FOLDER>"  "NOPRINT=YES;DEFAULTVIEW=UNKNOWN;HELPPANEL=48033;HELPLIBRARY=MMPARTS.HLP;SHADOWID=<@@boot_drive@@>\OS2\Bitmap;OBJECTID=<MMPM2_BITMAP>;"
+  "PM_InstallObject"  "Image;MMFinder;<MMPM2_FOLDER>"  "NOPRINT=YES;;OBJECTID=<MMPM2_IMAGEFINDER>;"
+  "PM_InstallObject"  "Compact Disc;MMCDDevice;<MMPM2_FOLDER>"  "NOPRINT=YES;CCVIEW=NO;;OBJECTID=<MMPM2_MMCDDEVICE01>;"
+  "PM_InstallObject"  "Volume;MMVolume;<MMPM2_FOLDER>"  "NOCOPY=YES;NODELETE=YES;NOPRINT=YES;CCVIEW=NO;;OBJECTID=<MMPM2_MMVOLUME>;"
+  "PM_InstallObject"  "MIDI;MMFinder;<MMPM2_FOLDER>"  "NOPRINT=YES;;OBJECTID=<MMPM2_MIDIFINDER>;"
+  "PM_InstallObject"  "Sound;WPShadow;<MMPM2_FOLDER>"  "NOPRINT=YES;DEFAULTVIEW=UNKNOWN;HELPPANEL=1186;SHADOWID=<WP_SOUND>;OBJECTID=<MMPM2_SNDSHAD>;"
+  "PM_InstallObject"  "Sound Bites;WPShadow;<MMPM2_FOLDER>"  "NOPRINT=YES;DEFAULTVIEW=UNKNOWN;HELPPANEL=1277;SHADOWID=<@@mmbase_path@@>Sounds;OBJECTID=<MMPM2_SOUNDS>;"
+  "PM_InstallObject"  "Digital video;MMFinder;<MMPM2_FOLDER>"  "NOPRINT=YES;;OBJECTID=<MMPM2_VIDEOFINDER>;"
+  "PM_InstallObject"  "Digital audio;MMFinder;<MMPM2_FOLDER>"  "NOPRINT=YES;;OBJECTID=<MMPM2_AUDIOFINDER>;"
+  "PM_InstallObject"  "Multimedia^Setup;WPProgram;<WP_CONFIG>"  "EXENAME=<@@mmbase_path@@>STPM.EXE;PROGTYPE=PM;STARTUPDIR=<@@mmbase_path@@>;OBJECTID=<MMPM2_SETUP>;"
+  
+  /* Disable coach from desktop if present */
+  "PM_InstallObject" "Deleted;IGSFolder;<WP_ASSISTANCE>;DELETE" "OBJECTID=<WP_IGSFOLDER>"
+  "PM_InstallObject" "Deleted;IGSCheckin;<WP_ASSISTANCE>;DELETE" "OBJECTID=<WP_IGSCHECKIN>"
+  "PM_InstallObject" "Deleted;WPProgram;<WP_IGSFOLDER>;DELETE" "OBJECTID=<WP_sysWiz>"
+  "PM_InstallObject" "Deleted1;WPProgram;<WP_IGSFOLDER>;DELETE" "OBJECTID=<WP_sysPrt>"
+  "PM_InstallObject" "Deleted2;WPProgram;<WP_IGSFOLDER>;DELETE" "OBJECTID=<WP_findObj>"
+  "PM_InstallObject" "Deleted3;WPProgram;<WP_IGSFOLDER>;DELETE" "OBJECTID=<WP_selInst>"
+  "PM_InstallObject" "Deleted4;WPProgram;<WP_IGSFOLDER>;DELETE" "OBJECTID=<WP_chkIn>"
+  "PM_InstallObject" "Deleted5;WPProgram;<WP_IGSFOLDER>;DELETE" "OBJECTID=<WP_wgSettg>"
+  "PM_InstallObject" "Deleted6;WPProgram;<WP_IGSFOLDER>;DELETE" "OBJECTID=<WP_addProg>"
+  "Coach" "DB_SYSTEM" ""
+  "Coach" "DB_BLOB" ""
+  "Coach" "DB_USER_DIR" ""
+  "Coach" "INITIAL_LU" ""
+  "CoachEnabled" "<@@boot_drive@@>\OS2\CCHMAIN.EXE" ""
+  "CoachEnabled" "<@@boot_drive@@>\OS2\PMSHELL.EXE" ""
+  "CoachEnabled" "<@@boot_drive@@>\OS2\INSTALL\MIGRATE.EXE" ""
+  "CoachEnabled" "<@@boot_drive@@>\OS2\INSTALL\INSTALL.EXE" ""
+  "CoachEnabled" "<@@boot_drive@@>\OS2\INSTALL\DDINSTAL.EXE" ""
+END
+
+STRINGTABLE REPLACEMODE
+BEGIN
+   "PM_InstallObject"  "Web Sites;WPUrlFolder;<WP_CONNECTIONSFOLDER>"  "SHOWALLINTREEVIEW=YES;OBJECTID=<WP_COOLURLSFOLDER>"
+   "PM_InstallObject"  "Business & Shopping;WPUrlFolder;<WP_COOLURLSFOLDER>;PRESERVEOLD" "SHOWALLINTREEVIEW=YES;OBJECTID=<URLF_BUS>"
+
+   "PM_InstallObject"  "Amazon Books;WPUrl;<URLF_BUS>;PRESERVEOLD"                          "URL=http://www.amazon.com;OBJECTID=<URL_AMAZON>"
+   "PM_InstallObject"  "BookWire;WPUrl;<URLF_BUS>;PRESERVEOLD"                              "URL=http://www.bookwire.com;OBJECTID=<URL_BOOKWIRE>"
+   "PM_InstallObject"  "American Airlines;WPUrl;<URLF_BUS>;PRESERVEOLD"                     "URL=http://www.americanair.com;OBJECTID=<URL_AA>"
+   "PM_InstallObject"  "Cathay Pacific;WPUrl;<URLF_BUS>;PRESERVEOLD"                        "URL=http://www.cathaypacific-air.com;OBJECTID=<URL_CATHAY>"
+   "PM_InstallObject"  "CDworld;WPUrl;<URLF_BUS>;PRESERVEOLD"                               "URL=http://www.cdworld.com;OBJECTID=<URL_CDWORLD>"
+   "PM_InstallObject"  "Delta Airlines;WPUrl;<URLF_BUS>;PRESERVEOLD"                        "URL=http://www.delta-air.com;OBJECTID=<URL_DELTA>"
+   "PM_InstallObject"  "DBC Online;WPUrl;<URLF_BUS>;PRESERVEOLD"                            "URL=http://www.dbc.com;OBJECTID=<URL_DBC>"
+   "PM_InstallObject"  "Hoover's Online;WPUrl;<URLF_BUS>;PRESERVEOLD"                       "URL=http://www.hoovers.com;OBJECTID=<URL_HOOVERS>"
+   "PM_InstallObject"  "L.L. Bean;WPUrl;<URLF_BUS>;PRESERVEOLD"                             "URL=http://www.llbean.com;OBJECTID=<URL_LLBEAN>"
+   "PM_InstallObject"  "Lufthansa;WPUrl;<URLF_BUS>;PRESERVEOLD"                             "URL=http://www.lufthansa.co.uk;OBJECTID=<URL_LUFTHANSA>"
+   "PM_InstallObject"  "MarketplaceMCI;WPUrl;<URLF_BUS>;PRESERVEOLD"                        "URL=http://www2.pcy.mci.net/marketplace;OBJECTID=<URL_MARKETPLACE>"
+   "PM_InstallObject"  "Northwest Airlines;WPUrl;<URLF_BUS>;PRESERVEOLD"                    "URL=http://www.nwa.com;OBJECTID=<URL_NWA>"
+   "PM_InstallObject"  "PC Quote;WPUrl;<URLF_BUS>;PRESERVEOLD"                              "URL=http://www.pcquote.com;OBJECTID=<URL_PCQUOTE>"
+   "PM_InstallObject"  "Qantas;WPUrl;<URLF_BUS>;PRESERVEOLD"                                "URL=http://www.qantas.com.au;OBJECTID=<URL_QUANTAS>"
+   "PM_InstallObject"  "The Sharper Image;WPUrl;<URLF_BUS>;PRESERVEOLD"                     "URL=http://www.sharperimage.com;OBJECTID=<URL_SHARPERIMAGE>"
+   "PM_InstallObject"  "Singapore Airlines;WPUrl;<URLF_BUS>;PRESERVEOLD"                    "URL=http://www.singaporeair.com;OBJECTID=<URL_SINGAPOREAIR>"
+   "PM_InstallObject"  "Southwest Airlines;WPUrl;<URLF_BUS>;PRESERVEOLD"                    "URL=http://www.iflyswa.com;OBJECTID=<URL_IFLYSWA>"
+   "PM_InstallObject"  "Trans World Airlines;WPUrl;<URLF_BUS>;PRESERVEOLD"                  "URL=http://www.twa.com;OBJECTID=<URL_TWA>"
+   "PM_InstallObject"  "United Airlines;WPUrl;<URLF_BUS>;PRESERVEOLD"                       "URL=http://www.ual.com;OBJECTID=<URL_UAL>"
+   "PM_InstallObject"  "USAir;WPUrl;<URLF_BUS>;PRESERVEOLD"                                 "URL=http://www.usair.com;OBJECTID=<URL_USAIR>"
+
+
+   "PM_InstallObject"  "Computing;WPUrlFolder;<WP_COOLURLSFOLDER>;PRESERVEOLD"              "SHOWALLINTREEVIEW=YES;OBJECTID=<URLF_COMP>"
+
+   "PM_InstallObject"  "Adobe;WPUrl;<URLF_COMP>;PRESERVEOLD"                                "URL=http://www.adobe.com;OBJECTID=<URL_ADOBE>"
+   "PM_InstallObject"  "c|net;WPUrl;<URLF_COMP>;PRESERVEOLD"                                "URL=http://www.cnet.com;OBJECTID=<URL_CNET>"
+   "PM_InstallObject"  "Corel;WPUrl;<URLF_COMP>;PRESERVEOLD"                                "URL=http://www.corel.ca;OBJECTID=<URL_COREL>"
+   "PM_InstallObject"  "Gamelan;WPUrl;<URLF_COMP>;PRESERVEOLD"                              "URL=http://www.gamelan.com;OBJECTID=<URL_GAMELAN>"
+   "PM_InstallObject"  "inquiry.com;WPUrl;<URLF_COMP>;PRESERVEOLD"                          "URL=http://www.inquiry.com;OBJECTID=<URL_INQUIRY>"
+   "PM_InstallObject"  "The List;WPUrl;<URLF_COMP>;PRESERVEOLD"                             "URL=http://www.thelist.com;OBJECTID=<URL_THELIST>"
+   "PM_InstallObject"  "Massachusetts Institute of Technology;WPUrl;<URLF_COMP>;PRESERVEOLD" "URL=http://web.mit.edu;OBJECTID=<URL_MIT>"
+   "PM_InstallObject"  "MGI Software Corporation;WPUrl;<URLF_COMP>;PRESERVEOLD"             "URL=http://www.mgisoft.com;OBJECTID=<URL_MGI>"
+   "PM_InstallObject"  "Netscape;WPUrl;<URLF_COMP>;PRESERVEOLD"                             "URL=http://www.netscape.com/;OBJECTID=<URL_NETSCAPE>"
+   "PM_InstallObject"  "ZD Net;WPUrl;<URLF_COMP>;PRESERVEOLD"                               "URL=http://www.zdnet.com;OBJECTID=<URL_ZDNET>"
+
+
+
+   "PM_InstallObject"  "Entertainment;WPUrlFolder;<WP_COOLURLSFOLDER>;PRESERVEOLD"  "SHOWALLINTREEVIEW=YES;OBJECTID=<URLF_ENT>"
+
+   "PM_InstallObject"  "ArtNet;WPUrl;<URLF_ENT>;PRESERVEOLD"                                "URL=http://www.artnet.com;OBJECTID=<URL_ARTNET>"
+   "PM_InstallObject"  "Court TV;WPUrl;<URLF_ENT>;PRESERVEOLD"                              "URL=http://www.courttv.com;OBJECTID=<URL_COURTTV>"
+   "PM_InstallObject"  "Disney;WPUrl;<URLF_ENT>;PRESERVEOLD"                                "URL=http://www.disney.com;OBJECTID=<URL_DISNEY>"
+   "PM_InstallObject"  "EON-4;WPUrl;<URLF_ENT>;PRESERVEOLD"                                 "URL=http://www.eon4.com;OBJECTID=<URL_EON4>"
+   "PM_InstallObject"  "Epicurious;WPUrl;<URLF_ENT>;PRESERVEOLD"                            "URL=http://www.epicurious.com;OBJECTID=<URL_EPICURIOUS>"
+   "PM_InstallObject"  "FilmZone;WPUrl;<URLF_ENT>;PRESERVEOLD"                              "URL=http://www.filmzone.com;OBJECTID=<URL_FILMZONE>"
+   "PM_InstallObject"  "Firefly;WPUrl;<URLF_ENT>;PRESERVEOLD"                               "URL=http://www.ffly.com;OBJECTID=<URL_FFLY>"
+   "PM_InstallObject"  "GNN;WPUrl;<URLF_ENT>;PRESERVEOLD"                                   "URL=http://www.gnn.com;OBJECTID=<URL_GNN>"
+   "PM_InstallObject"  "Happy Puppy Games;WPUrl;<URLF_ENT>;PRESERVEOLD"                     "URL=http://happypuppy.com;OBJECTID=<URL_HAPPYPUPPY>"
+   "PM_InstallObject"  "HotWired;WPUrl;<URLF_ENT>;PRESERVEOLD"                              "URL=http://www.hotwired.com;OBJECTID=<URL_WIRED>"
+   "PM_InstallObject"  "iGuide;WPUrl;<URLF_ENT>;PRESERVEOLD"                                "URL=http://www.iguide.com;OBJECTID=<URL_IGUIDE>"
+   "PM_InstallObject"  "Internet Movie Database;WPUrl;<URLF_ENT>;PRESERVEOLD"               "URL=http://www.imdb.com/welcome.html;OBJECTID=<URL_IMDB>"
+   "PM_InstallObject"  "Kid's Links;WPUrl;<URLF_ENT>;PRESERVEOLD"                           "URL=http://www.mcn.net/clinks.html;OBJECTID=<URL_KIDSLINKS>"
+   "PM_InstallObject"  "The Movie Critic;WPUrl;<URLF_ENT>;PRESERVEOLD"                      "URL=http://www.moviecritic.com;OBJECTID=<URL_MOVIECRITIC>"
+   "PM_InstallObject"  "Mr. Showbiz;WPUrl;<URLF_ENT>;PRESERVEOLD"                           "URL=http://www.mrshowbiz.com;OBJECTID=<URL_MRSHOWBIZ>"
+   "PM_InstallObject"  "Paramount Pictures;WPUrl;<URLF_ENT>;PRESERVEOLD"                    "URL=http://www.paramount.com;OBJECTID=<URL_PARAMOUNT>"
+   "PM_InstallObject"  "Playbill Theater Information;WPUrl;<URLF_ENT>;PRESERVEOLD"          "URL=http://www.playbill.com;OBJECTID=<URL_PLAYBILL>"
+   "PM_InstallObject"  "The Rainforest Action Network;WPUrl;<URLF_ENT>;PRESERVEOLD"         "URL=http://www.ran.org;OBJECTID=<URL_RAN>"
+   "PM_InstallObject"  "Riddler;WPUrl;<URLF_ENT>;PRESERVEOLD"                               "URL=http://www.riddler.com;OBJECTID=<URL_RIDDLER>"
+   "PM_InstallObject"  "SportsLine USA;WPUrl;<URLF_ENT>;PRESERVEOLD"                        "URL=http://www.sportsline.com;OBJECTID=<URL_SPORTSLINE>"
+   "PM_InstallObject"  "Sony Pictures Entertainment;WPUrl;<URLF_ENT>;PRESERVEOLD"           "URL=http://www.spe.sony.com;OBJECTID=<URL_SONYPE>"
+   "PM_InstallObject"  "Terminal X;WPUrl;<URLF_ENT>;PRESERVEOLD"                            "URL=http://www.neosoft.com/sbanks/xfiles/xfiles.html;OBJECTID=<URL_XFILES>"
+   "PM_InstallObject"  "TV1;WPUrl;<URLF_ENT>;PRESERVEOLD"                                   "URL=http://www.tv1.com;OBJECTID=<URL_TV1>"
+   "PM_InstallObject"  "20th Century Fox;WPUrl;<URLF_ENT>;PRESERVEOLD"                      "URL=http://www.fox.com;OBJECTID=<URL_FOX>"
+   "PM_InstallObject"  "Walt Disney Pictures;WPUrl;<URLF_ENT>;PRESERVEOLD"                  "URL=http://www.disney.com/DisneyPictures;OBJECTID=<URL_DISNEYPIC>"
+   "PM_InstallObject"  "Warner Brothers Movies;WPUrl;<URLF_ENT>;PRESERVEOLD"                "URL=http://www.movies.warnerbros.com;OBJECTID=<URL_WARNERBROS>"
+   "PM_InstallObject"  "Word;WPUrl;<URLF_ENT>;PRESERVEOLD"                                  "URL=http://www.word.com/index.html;OBJECTID=<URL_WORD>"
+
+
+   "PM_InstallObject"  "Reference;WPUrlFolder;<WP_COOLURLSFOLDER>;PRESERVEOLD" "SHOWALLINTREEVIEW=YES;OBJECTID=<URLF_REF>"
+
+   "PM_InstallObject"  "BigBook;WPUrl;<URLF_REF>;PRESERVEOLD"                               "URL=http://www.bigbook.com;OBJECTID=<URL_BIGBOOK>"
+   "PM_InstallObject"  "CityNet;WPUrl;<URLF_REF>;PRESERVEOLD"                               "URL=http://www.city.net;OBJECTID=<URL_CITYNET>"
+   "PM_InstallObject"  "Edmund's Automobile Buyer's Guides;WPUrl;<URLF_REF>;PRESERVEOLD"    "URL=http://www.edmunds.com;OBJECTID=<URL_EDMUNDS>"
+   "PM_InstallObject"  "Four11;WPUrl;<URLF_REF>;PRESERVEOLD"                                "URL=http://www.four11.com;OBJECTID=<URL_FOUR11>"
+   "PM_InstallObject"  "Global Health Network;WPUrl;<URLF_REF>;PRESERVEOLD"                 "URL=http://www.pitt.edu/HOME/GHNet/GHNet.html;OBJECTID=<URL_GHNET>"
+   "PM_InstallObject"  "Internal Revenue Service;WPUrl;<URLF_REF>;PRESERVEOLD"              "URL=http://www.irs.ustreas.gov;OBJECTID=<URL_IRS>"
+   "PM_InstallObject"  "The Library of Congress;WPUrl;<URLF_REF>;PRESERVEOLD"               "URL=http://www.loc.gov;OBJECTID=<URL_LIBRARY_OF_CONGRESS>"
+   "PM_InstallObject"  "MapQuest;WPUrl;<URLF_REF>;PRESERVEOLD"                              "URL=http://www.mapquest.com;OBJECTID=<URL_MAPQUEST>"
+   "PM_InstallObject"  "National Oceanic and Atmospheric Administration;WPUrl;<URLF_REF>;PRESERVEOLD" "URL=http://www.nnic.noaa.gov/;OBJECTID=<URL_NOAA>"
+   "PM_InstallObject"  "Subway Navigator;WPUrl;<URLF_REF>;PRESERVEOLD"                      "URL=http://metro.jussieu.fr:10001/bin/cities/english;OBJECTID=<URL_SUBWAYNAV>"
+   "PM_InstallObject"  "Switchboard;WPUrl;<URLF_REF>;PRESERVEOLD"                           "URL=http://www.switchboard.com;OBJECTID=<URL_SWITCHBOARD>"
+   "PM_InstallObject"  "THOMAS: Legislative Information;WPUrl;<URLF_REF>;PRESERVEOLD"       "URL=http://thomas.loc.gov;OBJECTID=<URL_THOMAS>"
+   "PM_InstallObject"  "US Gov't Info Sources;WPUrl;<URLF_REF>;PRESERVEOLD"                 "URL=http://iridium.nttc.edu/gov_res.html;OBJECTID=<URL_US_GOV_INFO>"
+   "PM_InstallObject"  "The Vatican Library Exhibit;WPUrl;<URLF_REF>;PRESERVEOLD"           "URL=http://lcweb.loc.gov/exhibits/vatican/toc.html;OBJECTID=<URL_VATICAN>"
+
+
+   "PM_InstallObject"  "Web Search Sites;WPUrlFolder;<WP_COOLURLSFOLDER>;PRESERVEOLD" "SHOWALLINTREEVIEW=YES;OBJECTID=<URLF_SEARCH>"
+
+   "PM_InstallObject"  "Alta Vista;WPUrl;<URLF_SEARCH>;PRESERVEOLD"                         "URL=http://www.altavista.digital.com/;OBJECTID=<URL_ALTAVISTA>"
+   "PM_InstallObject"  "Excite;WPUrl;<URLF_SEARCH>;PRESERVEOLD"                             "URL=http://www.excite.com;OBJECTID=<URL_EXCITE>"
+   "PM_InstallObject"  "HotBot;WPUrl;<URLF_SEARCH>;PRESERVEOLD"                             "URL=http://www.hotbot.com;OBJECTID=<URL_HOTBOT>"
+   "PM_InstallObject"  "InfoSeek;WPUrl;<URLF_SEARCH>;PRESERVEOLD"                           "URL=http://www.infoseek.com;OBJECTID=<URL_INFOSEEK>"
+   "PM_InstallObject"  "Lycos;WPUrl;<URLF_SEARCH>;PRESERVEOLD"                              "URL=http://www.Lycos.com;OBJECTID=<URL_LYCOS>"
+   "PM_InstallObject"  "Search;WPUrl;<URLF_SEARCH>;PRESERVEOLD"                             "URL=http://www.search.com;OBJECTID=<URL_SEARCH>"
+   "PM_InstallObject"  "WebCrawler;WPUrl;<URLF_SEARCH>;PRESERVEOLD"                         "URL=http://webcrawler.com;OBJECTID=<URL_WEBCRAWLER>"
+   "PM_InstallObject"  "Yahoo!;WPUrl;<URLF_SEARCH>;PRESERVEOLD"                             "URL=http://www.yahoo.com;OBJECTID=<URL_YAHOO>"
+
+
+   "PM_InstallObject"  "IBM Web Pages;WPUrlFolder;<WP_COOLURLSFOLDER>;PRESERVEOLD"  "SHOWALLINTREEVIEW=YES;OBJECTID=<URLF_IBM>"
+
+
+   "PM_InstallObject"  "IBM Centre for Java Technology Development;WPUrl;<URLF_IBM>;PRESERVEOLD" "URL=http://ncc.hursley.ibm.com/javainfo/;OBJECTID=<URL_JAVA_INFO>"
+   "PM_InstallObject"  "IBM Corporation;WPUrl;<URLF_IBM>;PRESERVEOLD"                       "URL=http://www.ibm.com;OBJECTID=<URL_IBM>"
+   "PM_InstallObject"  "IBM Developer Connection;WPUrl;<URLF_IBM>;PRESERVEOLD"              "URL=http://www.developer.ibm.com/DevCon/;OBJECTID=<URL_DEVCON>"
+   "PM_InstallObject"  "IBM Internet Connection;WPUrl;<URLF_IBM>;PRESERVEOLD"               "URL=http://www.ibm.net;OBJECTID=<URL_IBMINTERNET>"
+   "PM_InstallObject"  "IBM Network Computing;WPUrl;<URLF_IBM>;PRESERVEOLD"                 "URL=http://www.internet.ibm.com;OBJECTID=<URL_IBMNETWORKCOMPUTING>"
+   "PM_InstallObject"  "IBM Personal Computing;WPUrl;<URLF_IBM>;PRESERVEOLD"                "URL=http://www.pcco.ibm.com;OBJECTID=<URL_IBMPC>"
+   "PM_InstallObject"  "Lotus Home Page;WPUrl;<URLF_IBM>;PRESERVEOLD"                       "URL=http://www.lotus.com;OBJECTID=<URL_LOTUS>"
+
+   "PM_InstallObject"  "OS/2 Related Web Pages;WPUrlFolder;<WP_COOLURLSFOLDER>;PRESERVEOLD"  "SHOWALLINTREEVIEW=YES;OBJECTID=<URLF_OS2>"
+
+   "PM_InstallObject"  "Corrigan Computer's OS/2 Links;WPUrl;<URLF_OS2>;PRESERVEOLD"        "URL=http://www.teleport.com/~jcorigan/Warp.shtml;OBJECTID=<URL_TELEPORT>"
+   "PM_InstallObject"  "OS/2 Device Driver Pak On-Line;WPUrl;<URLF_OS2>;PRESERVEOLD"        "URL=http://service.software.ibm.com/os2ddpak/index.htm;OBJECTID=<URL_OS2DDPAK>"
+   "PM_InstallObject"  "Systems and Devices Compatible with OS/2;WPUrl;<URLF_OS2>;PRESERVEOLD" "URL=http://www.austin.ibm.com/pspinfo/os2hw.html;OBJECTID=<URL_OS2HWCOMPAT>"
+   "PM_InstallObject"  "OS/2 Links;WPUrl;<URLF_OS2>;PRESERVEOLD"                            "URL=http://www.pa.net/~ellingtg/OS2LINK.HTM;OBJECTID=<URL_OS2LINKS>"
+   "PM_InstallObject"  "OS/2 Warp Home Page;WPUrl;<URLF_OS2>;PRESERVEOLD"                   "URL=http://www.austin.ibm.com/pspinfo/os2.html;OBJECTID=<URL_WARP>"
+   "PM_InstallObject"  "OS/2 Warp Server Home Page;WPUrl;<URLF_OS2>;PRESERVEOLD"            "URL=http://www.software.ibm.com/os/warp-server;OBJECTID=<URL_WARP_SERVER>"
+   "PM_InstallObject"  "Team OS/2 Online;WPUrl;<URLF_OS2>;PRESERVEOLD"                      "URL=http://www.addc.com/os2pages/teamos2.html;OBJECTID=<URL_TEAMOS2>"
+   "PM_InstallObject"  "Norloff's OS/2 Shareware BBS;WPUrl;<URLF_OS2>;PRESERVEOLD"          "URL=http://www.os2bbs.com/;OBJECTID=<URL_OS2_SHAREWARE_BBS>"
+   "PM_InstallObject"  "Warp Online;WPUrl;<URLF_OS2>;PRESERVEOLD"                           "URL=http://www.in.net/~mcdonajp/0596/;OBJECTID=<URL_WARP_ONLINE>"
+
+
+   "PM_InstallObject"  "Education;WPUrlFolder;<WP_COOLURLSFOLDER>;PRESERVEOLD"  "SHOWALLINTREEVIEW=YES;OBJECTID=<URLF_EDU>"
+
+   "PM_InstallObject"  "The Discovery Channel Online;WPUrl;<URLF_EDU>;PRESERVEOLD"          "URL=http://www.discovery.com;OBJECTID=<URL_DISCOVERY>"
+   "PM_InstallObject"  "The Fourth R;WPUrl;<URLF_EDU>;PRESERVEOLD"                          "URL=http://www.halcyon.com/FourthR/;OBJECTID=<URL_FOURTHR>"
+   "PM_InstallObject"  "Microlearn Nordic Home Page;WPUrl;<URLF_EDU>;PRESERVEOLD"           "URL=http://www.microlearn.se/;OBJECTID=<URL_MICROLEARN>"
+   "PM_InstallObject"  "NASA;WPUrl;<URLF_EDU>;PRESERVEOLD"                                  "URL=http://www.nasa.gov;OBJECTID=<URL_NASA>"
+   "PM_InstallObject"  "The Why Files;WPUrl;<URLF_EDU>;PRESERVEOLD"                         "URL=http://whyfiles.news.wisc.edu;OBJECTID=<URL_WHYFILES>"
+
+
+
+   "PM_InstallObject"  "News and Sports;WPUrlFolder;<WP_COOLURLSFOLDER>;PRESERVEOLD"    "SHOWALLINTREEVIEW=YES;OBJECTID=<URLF_NEWS>"
+
+   "PM_InstallObject"  "Asahi Shimbun;WPUrl;<URLF_NEWS>;PRESERVEOLD"                        "URL=http://www.asahi.com;OBJECTID=<URL_ASAHI>"
+   "PM_InstallObject"  "The official Site of Major League Baseball;WPUrl;<URLF_NEWS>;PRESERVEOLD"  "URL=http://www.majorleaguebaseball.com/;OBJECTID=<URL_BASEBALL>"
+   "PM_InstallObject"  "Clarin;WPUrl;<URLF_NEWS>;PRESERVEOLD"                               "URL=http://www.clarin.com.ar;OBJECTID=<URL_CLARIN>"
+   "PM_InstallObject"  "CNN Interactive;WPUrl;<URLF_NEWS>;PRESERVEOLD"                      "URL=http://www.cnn.com;OBJECTID=<URL_CNN>"
+   "PM_InstallObject"  "De Telegraaf;WPUrl;<URLF_NEWS>;PRESERVEOLD"                         "URL=http://www.telegraaf.nl;OBJECTID=<URL_TELEGRAAF>"
+   "PM_InstallObject"  "Die Welt;WPUrl;<URLF_NEWS>;PRESERVEOLD"                             "URL=http://www.welt.de;OBJECTID=<URL_WELT>"
+   "PM_InstallObject"  "El Pais;WPUrl;<URLF_NEWS>;PRESERVEOLD"                              "URL=http://www.elpais.es;OBJECTID=<URL_ELPAIS>"
+   "PM_InstallObject"  "ESPNet SportsZone;WPUrl;<URLF_NEWS>;PRESERVEOLD"                    "URL=http://espnet.sportszone.com;OBJECTID=<URL_SPORTSZONE>"
+   "PM_InstallObject"  "Excelsior;WPUrl;<URLF_NEWS>;PRESERVEOLD"                            "URL=http://excelsior.com.mx;OBJECTID=<URL_EXCELSIOR>"
+   "PM_InstallObject"  "Infosage;WPUrl;<URLF_NEWS>;PRESERVEOLD"                             "URL=http://www.infosage.ibm.com/;OBJECTID=<URL_INFOSAGE>"
+   "PM_InstallObject"  "Le Monde;WPUrl;<URLF_NEWS>;PRESERVEOLD"                             "URL=http://www.lemonde.fr;OBJECTID=<URL_LEMONDE>"
+   "PM_InstallObject"  "The London Times;WPUrl;<URLF_NEWS>;PRESERVEOLD"                     "URL=http://www.the-times.co.uk;OBJECTID=<URL_THETIMES>"
+   "PM_InstallObject"  "Los Angeles Times;WPUrl;<URLF_NEWS>;PRESERVEOLD"                    "URL=http://www.latimes.com;OBJECTID=<URL_LATIMES>"
+   "PM_InstallObject"  "MovieLink;WPUrl;<URLF_NEWS>;PRESERVEOLD"                            "URL=http://www.movielink.com;OBJECTID=<URL_MOVIELINK>"
+   "PM_InstallObject"  "National Football League;WPUrl;<URLF_NEWS>;PRESERVEOLD"             "URL=http://www.nfl.com;OBJECTID=<URL_NFL>"
+   "PM_InstallObject"  "National Basketball Association;WPUrl;<URLF_NEWS>;PRESERVEOLD"      "URL=http://www.nba.com;OBJECTID=<URL_NBA>"
+   "PM_InstallObject"  "Time, Life, People, Sports Illustrated;WPUrl;<URLF_NEWS>;PRESERVEOLD"  "URL=http://pathfinder.com;OBJECTID=<URL_PATHFINDER>"
+   "PM_InstallObject"  "The New York Times;WPUrl;<URLF_NEWS>;PRESERVEOLD"                   "URL=http://www.nytimes.com;OBJECTID=<URL_NYTIMES>"
+   "PM_InstallObject"  "The Sydney Morning Herald;WPUrl;<URLF_NEWS>;PRESERVEOLD"            "URL=http://www.smh.com.au;OBJECTID=<URL_SMH>"
+   "PM_InstallObject"  "Tages Anzeiger;WPUrl;<URLF_NEWS>;PRESERVEOLD"                       "URL=http://www.tages-anzeiger.ch;OBJECTID=<URL_TAGES>"
+   "PM_InstallObject"  "Toronto Globe;WPUrl;<URLF_NEWS>;PRESERVEOLD"                        "URL=http://www.GlobeAndMail.CA;OBJECTID=<URL_TORONTOGLOBE>"
+   "PM_InstallObject"  "USA Today;WPUrl;<URLF_NEWS>;PRESERVEOLD"                            "URL=http://www.usatoday.com;OBJECTID=<URL_USATODAY>"
+   "PM_InstallObject"  "The Wall Street Journal Money and Investing Update;WPUrl;<URLF_NEWS>;PRESERVEOLD"  "URL=http://update.wsj.com;OBJECTID=<URL_WSJ>"
+END
+
+STRINGTABLE REPLACEMODE
+BEGIN
+  /* PM_Workplace:IplLoad - these are classes which are loaded every time the */
+  /* the shell IPL's.  In addition to those listed here many apps add their   */
+  /* Dll's to this list programatically                                       */
+  "PM_Workplace:IplLoad" "WPInstall" ""
+
+  /* Must delete existing EZPLAY object so we can add the folder of the same name */
+  "PM_InstallObject" "Plug and Play^for PCMCIA;Ezplay;<WP_CONFIG>;DELETE" "OBJECTID=<WP_CMPNP>"
+  "PM_InstallObject" "Plug and Play^for PCMCIA;WPFolder;<WP_CONFIG>;REPLACE" "OBJECTID=<WP_CMPNPFDR>"
+
+  /* Objects that are in the Plug and Play folder in System Setup folder on the desktop */
+  "PM_InstallObject" "FFORMAT2.EXE;WPProgram;<WP_CMPNPFDR>;REPLACE" "EXENAME=<@@boot_drive@@>\OS2\FFORMAT2.EXE;OBJECTID=<WP_CMPNP_FFORMAT2>"
+  "PM_InstallObject" "FCHECK2.EXE;WPProgram;<WP_CMPNPFDR>;REPLACE" "EXENAME=<@@boot_drive@@>\OS2\FCHECK2.EXE;OBJECTID=<WP_CMPNP_FCHECK2>"
+  "PM_InstallObject" "AUTOUTL2.EXE;WPProgram;<WP_CMPNPFDR>;REPLACE" "EXENAME=<@@boot_drive@@>\OS2\AUTOUTL2.EXE;OBJECTID=<WP_CMPNP_AUTOUTL2>"
+  "PM_InstallObject" "ATAMNT2.EXE;WPProgram;<WP_CMPNPFDR>;REPLACE" "EXENAME=<@@boot_drive@@>\OS2\ATAMNT2.EXE;OBJECTID=<WP_CMPNP_ATAMNT2>"
+  "PM_InstallObject" "Plug and Play^for PCMCIA;Ezplay;<WP_CMPNPFDR>;UPDATE" "OBJECTID=<WP_CMPNP>"
+
+  "PM_InstallObject" ";WPPower;<WP_CONFIG>;PRESERVEOLD" "OBJECTID=<WP_POWER>"
+  "PM_InstallObject" ";WPWinConfig;<WP_CONFIG>;PRESERVEOLD" "OBJECTID=<WP_WINCFG>"
+  "PM_InstallObject" "Create Utility Diskettes;WPProgram;<WP_CONFIG>;REPLACE" "EXENAME=<@@boot_drive@@>\OS2\INSTALL\BOOTDISK.EXE;PROGTYPE=PM;HELPPANEL=32163;OBJECTID=<WP_BOOT>"
+
+  "PM_InstallObject" "DOS Full Screen;WPProgram;<WP_PROMPTS>;PRESERVEOLD" "EXENAME=*;PROGTYPE=VDM;HELPPANEL=8011;CCVIEW=YES;PARAMETERS=%;OBJECTID=<WP_DOSFS>"
+  "PM_InstallObject" "DOS Window;WPProgram;<WP_PROMPTS>;PRESERVEOLD" "EXENAME=*;PROGTYPE=WINDOWEDVDM;HELPPANEL=8012;CCVIEW=YES;PARAMETERS=%;OBJECTID=<WP_DOSWIN>"
+  "PM_InstallObject" "WIN-OS/2 Full Screen;WPProgram;<WP_PROMPTS>;PRESERVEOLD" "EXENAME=*;PROGTYPE=PROG_31_ENH;SET KBD_ALTHOME_BYPASS=1;SET KBD_CTRL_BYPASS=CTRL_ESC;SET VIDEO_SWITCH_NOTIFICATION=1;SET VIDEO_8514A_XGA_IOTRAP=0;SET DPMI_MEMORY_LIMIT=64;SET WIN_DDE=0;SET WIN_CLIPBOARD=1;HELPPANEL=8022;OBJECTID=<WP_WINFS>"
+  "PM_InstallObject" "WIN-OS/2 Window;WPProgram;<WP_PROMPTS>;PRESERVEOLD" "EXENAME=PROGMAN.EXE;PROGTYPE=PROG_31_ENHSEAMLESSCOMMON;SET KBD_ALTHOME_BYPASS=1;SET KBD_CTRL_BYPASS=CTRL_ESC;SET VIDEO_SWITCH_NOTIFICATION=1;SET VIDEO_8514A_XGA_IOTRAP=0;SET DPMI_MEMORY_LIMIT=64;SET WIN_DDE=0;SET WIN_CLIPBOARD=1;HELPPANEL=8022;OBJECTID=<WP_WIN2WIN>"
+  "PM_InstallObject" "DOS from Drive A:;WPProgram;<WP_PROMPTS>;PRESERVEOLD" "EXENAME=*;PROGTYPE=VDM;SET DOS_STARTUP_DRIVE=A:;HELPPANEL=8529;ICONRESOURCE=47,PMWP;OBJECTID=<WP_DOS_DRV_A>"
+  "PM_InstallObject" "Dual Boot;WPProgram;<WP_PROMPTS>;PRESERVEOLD" "EXENAME=BOOT.COM;PROGTYPE=WINDOWABLEVIO;PARAMETERS=/DOS;HELPPANEL=8029;ICONRESOURCE=49,PMWP;OBJECTID=<WP_DBOOT>"
+
+  "PM_InstallObject" "Games;WPFolder;<WP_PROGRAMSFOLDER>;PRESERVEOLD" "ICONRESOURCE=88 PMWP;ICONNRESOURCE=1,89,PMWP;HELPPANEL=13091;OBJECTID=<WP_GAMES>"
+  "PM_MigrateFolder" "<WP_GAMES>"  " "
+
+  "PM_InstallObject" "Applications;WPFolder;<WP_PROGRAMSFOLDER>;PRESERVEOLD" "OBJECTID=<WP_APPSFOLDER>"
+  "PM_MigrateFolder" "<WP_APPSFOLDER>"  " "
+
+  "PM_InstallObject" "New Folder;WPFolder;<WP_PROGRAMSFOLDER>;PRESERVEOLD" "TEMPLATE=YES;OBJECTID=<WP_NEWFOLDER>"
+  "PM_InstallObject" "New Program;WPProgram;<WP_PROGRAMSFOLDER>;PRESERVEOLD" "TEMPLATE=YES;OBJECTID=<WP_NEWPROGRAM>"
+
+  "PM_InstallObject" ";WPPrinter;<WP_PRINTERSFOLDER>;PRESERVEOLD" "TEMPLATE=YES;OBJECTID=<WP_NEWPRINTER>"
+  "PM_InstallObject" "Network Printer;WPRPrinter;<WP_PRINTERSFOLDER>;PRESERVEOLD" "TEMPLATE=YES;TAKEDEFAULTS=YES;OBJECTID=<WP_NEWREMOTEPRINTER>"
+
+  "PM_InstallObject" "Klondike Solitaire;WPProgram;<WP_GAMES>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\APPS\KLONDIKE.EXE;PROGTYPE=PM;HELPPANEL=20295;OBJECTID=<WP_KLDK>"
+  "PM_InstallObject" "OS/2 Chess;WPProgram;<WP_GAMES>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\APPS\OS2CHESS.EXE;PROGTYPE=PM;STARTUPDIR=\OS2\APPS;HELPPANEL=20296;OBJECTID=<WP_CHESS>"
+  "PM_InstallObject" "Mahjongg Solitaire;WPFolder;<WP_GAMES>;PRESERVEOLD" "ICONFILE=\OS2\APPS\MJFOLDER.ICO;HELPPANEL=32219;VIEWBUTTON=HIDE;MINWIN=HIDE;OBJECTID=<MAH_FOLDER>"
+
+  "PM_InstallObject" "Mahjongg;WPProgram;<MAH_FOLDER>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\APPS\MAHJONGG.EXE;PROGTYPE=PM;ASSOCFILTER=*.MAH;ICONFILE=\OS2\APPS\MAHJONGG.ICO;STARTUPDIR=\OS2\APPS;HELPPANEL=32219;OBJECTID=<MAH_EXE>"
+  "PM_InstallObject" "DEFAULT.MAH;WPShadow;<MAH_FOLDER>;PRESERVEOLD" "SHADOWID=<@@boot_drive@@>\OS2\APPS\DEFAULT.MAH;HELPPANEL=32219"
+  "PM_InstallObject" "CASTLE.MAH;WPShadow;<MAH_FOLDER>;PRESERVEOLD" "SHADOWID=<@@boot_drive@@>\OS2\APPS\CASTLE.MAH;HELPPANEL=32219"
+  "PM_InstallObject" "GIZEH.MAH;WPShadow;<MAH_FOLDER>;PRESERVEOLD" "SHADOWID=<@@boot_drive@@>\OS2\APPS\GIZEH.MAH;HELPPANEL=32219"
+  "PM_InstallObject" "TAJMAHAL.MAH;WPShadow;<MAH_FOLDER>;PRESERVEOLD" "SHADOWID=<@@boot_drive@@>\OS2\APPS\TAJMAHAL.MAH;HELPPANEL=32219"
+  "PM_InstallObject" "TOWERBRI.MAH;WPShadow;<MAH_FOLDER>;PRESERVEOLD" "SHADOWID=<@@boot_drive@@>\OS2\APPS\TOWERBRI.MAH;HELPPANEL=32219"
+  "PM_InstallObject" "BRIDGE.MAH;WPShadow;<MAH_FOLDER>;PRESERVEOLD" "SHADOWID=<@@boot_drive@@>\OS2\APPS\BRIDGE.MAH;HELPPANEL=32219"
+  "PM_InstallObject" "CRAZYCUB.MAH;WPShadow;<MAH_FOLDER>;PRESERVEOLD" "SHADOWID=<@@boot_drive@@>\OS2\APPS\CRAZYCUB.MAH;HELPPANEL=32219"
+  "PM_InstallObject" "CUBE.MAH;WPShadow;<MAH_FOLDER>;PRESERVEOLD" "SHADOWID=<@@boot_drive@@>\OS2\APPS\CUBE.MAH;HELPPANEL=32219"
+  "PM_InstallObject" "YINGYANG.MAH;WPShadow;<MAH_FOLDER>;PRESERVEOLD" "SHADOWID=<@@boot_drive@@>\OS2\APPS\YINYANG.MAH;HELPPANEL=32219"
+
+  "PM_InstallObject" "Enhanced Editor;WPProgram;<WP_TOOLS>;PRESERVEOLD"  "EXENAME=<@@boot_drive@@>\OS2\APPS\EPM.EXE;PROGTYPE=PM;HELPPANEL=20278;OBJECTID=<WP_EPM>"
+  "PM_InstallObject" "Seek and Scan Files;WPProgram;<WP_TOOLS>;PRESERVEOLD"  "EXENAME=<@@boot_drive@@>\OS2\APPS\PMSEEK.EXE;PROGTYPE=PM;HELPPANEL=20285;OBJECTID=<WP_SEEK>"
+  "PM_InstallObject" "Icon Editor;WPProgram;<WP_TOOLS>;PRESERVEOLD"  "EXENAME=<@@boot_drive@@>\OS2\ICONEDIT.EXE;PROGTYPE=PM;ASSOCFILTER=*.BMP,*.PTR,*.ICO;HELPPANEL=20279;OBJECTID=<WP_ICON>"
+  "PM_InstallObject" "CPU Monitor;WPProgram;<WP_TOOLS>;PRESERVEOLD"  "EXENAME=<@@boot_drive@@>\OS2\MPCPUMON.EXE;PROGTYPE=PM;ICONFILE=<@@boot_drive@@>\OS2\MPCPUMON.ICO;HELPPANEL=20284;OBJECTID=<WP_PULSE>"
+  "PM_InstallObject" "Clipboard Viewer;WPProgram;<WP_TOOLS>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\CLIPOS2.EXE;PROGTYPE=PM;HELPPANEL=20274;OBJECTID=<WP_CLIPV>"
+  "PM_InstallObject" "Picture Viewer;WPProgram;<WP_TOOLS>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\APPS\PICVIEW.EXE;PROGTYPE=PM;ASSOCTYPE=Metafile,PIF file,,;ASSOCFILTER=*.MET,*.PIF,,;OBJECTID=<WP_PICV>"
+
+  "PM_InstallObject" "Reference and Commands;WPFolder;<WP_INFO>;PRESERVEOLD" "DEFAULTVIEW=ICON;OBJECTID=<WP_REFCMDFOLDER>;SHOWALLINTREEVIEW=YES"
+
+  "PM_InstallObject" "Command Reference;WPProgram;<WP_REFCMDFOLDER>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\VIEW.EXE;PARAMETERS=CMDREF.INF;HELPPANEL=9301;OBJECTID=<WP_CMDREF>"
+  "PM_InstallObject" "REXX Information;WPProgram;<WP_REFCMDFOLDER>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\VIEW.EXE;PARAMETERS=REXX.INF;HELPPANEL=9300;OBJECTID=<WP_REXREF>"
+  "PM_InstallObject" "Trademarks;WPProgram;<WP_REFCMDFOLDER>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\VIEW.EXE;PARAMETERS=TRADEMBK.INF;OBJECTID=<WP_TRADEMBK>"
+
+  "PM_InstallObject" "Tasks;WPFolder;<WP_INFO>;PRESERVEOLD" "DEFAULTVIEW=ICON;OBJECTID=<WP_TASKSINFO>;SHOWALLINTREEVIEW=YES"
+
+  "PM_InstallObject" "OS/2 Warp Desktop Guide;WPProgram;<WP_TASKSINFO>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\VIEW.EXE;PARAMETERS=OS2UG.INF;HELPPANEL=33401;OBJECTID=<WP_OS2UGBK>"
+
+  "PM_InstallObject" "Troubleshooting;WPFolder;<WP_ASSISTANCE>;PRESERVEOLD" "DEFAULTVIEW=ICON;OBJECTID=<WP_TROUBLEINFO>"
+
+  "PM_InstallObject" "Serviceability and Troubleshooting Guide;WPProgram;<WP_TROUBLEINFO>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\VIEW.EXE;PARAMETERS=TROUBLE.INF;OBJECTID=<WP_TRBLSHT>"
+
+  "PM_InstallObject" "OS/2 Trace Guide;WPProgram;<WP_TROUBLEINFO>;PRESERVEOLD" "EXENAME=<@@boot_drive@@>\OS2\VIEW.EXE;PARAMETERS=OS2TRACE.INF;OBJECTID=<WP_TRBLTRA>"
+
+  "PM_InstallObject" "Information from^the Internet;WPUrl;<WP_ASSISTANCE>;PRESERVEOLD" "LOCATOR=http://www.austin.ibm.com/pspinfo/os2.html;HELPPANEL=33933"
+
+  "PM_InstallObject" "Toolbar;WPLaunchPad;<WP_OS2SYS>;PRESERVEOLD" "OBJECTID=<WP_LAUNCHPAD>"
+
+  "PM_InstallObject" "Font Palette;WPFontPalette;<WP_CONFIG>;PRESERVEOLD" "NODELETE=YES;OBJECTID=<WP_FNTPAL>"
+  "PM_InstallObject" "Mixed Color Palette;WPColorPalette;<WP_CONFIG>;PRESERVEOLD" "NODELETE=YES;AUTOSETUP=HIRES;OBJECTID=<WP_HIRESCLRPAL>"
+  "PM_InstallObject" "Solid Color Palette;WPColorPalette;<WP_CONFIG>;PRESERVEOLD" "NODELETE=YES;AUTOSETUP=LORES;OBJECTID=<WP_LORESCLRPAL>"
+END
+
+CODEPAGE 850
+
+STRINGTABLE REPLACEMODE
+BEGIN
+  "PM_Colors"          "ActiveBorder"          "204 204 204"
+  "PM_Colors"          "ActiveTitle"           " 43   0 170"
+  "PM_Colors"          "ActiveTitleText"       "255 255 255"
+  "PM_Colors"          "ActiveTitleTextBgnd"   " 43   0 170"
+  "PM_Colors"          "AppWorkspace"          "204 204 204"
+  "PM_Colors"          "Background"            "  0   0 128"
+  "PM_Colors"          "ButtonDark"            "128 128 128"
+  "PM_Colors"          "ButtonDefault"         "  0   0   0"
+  "PM_Colors"          "ButtonLight"           "255 255 255"
+  "PM_Colors"          "ButtonMiddle"          "204 204 204"
+  "PM_Colors"          "DesktopBackgroundBitmap"       "(none)"
+  "PM_Colors"          "DesktopIconText"       "255 255 255"
+  "PM_Colors"          "DesktopIconTextBackground"  "T"
+  "PM_Colors"          "DialogBackground"      "204 204 204"
+  "PM_Colors"          "Display"               "VGA"
+  "PM_Colors"          "EntryField"            "255 255 255"
+  "PM_Colors"          "FieldBackground"       "204 204 204"
+  "PM_Colors"          "FolderIconTextBackground"   "T"
+  "PM_Colors"          "HelpBackground"        "255 255 255"
+  "PM_Colors"          "HelpHilite"            "  0   0 255"
+  "PM_Colors"          "HelpText"              "  0   0   0"
+  "PM_Colors"          "HiliteBackground"      "128 128 128"
+  "PM_Colors"          "HiliteForeground"      "255 255 255"
+  "PM_Colors"          "IconText"              "  0   0   0"
+  "PM_Colors"          "InactiveBorder"        "204 204 204"
+  "PM_Colors"          "InactiveTitle"         "128 128 128"
+  "PM_Colors"          "InactiveTitleText"     "204 204 204"
+  "PM_Colors"          "InactiveTitleTextBgnd" "128 128 128"
+  "PM_Colors"          "Menu"                  "204 204 204"
+  "PM_Colors"          "MenuDisabledText"      "160 160 160"
+  "PM_Colors"          "MenuHilite"            " 43   0 170"
+  "PM_Colors"          "MenuHiliteText"        "255 255 255"
+  "PM_Colors"          "MenuText"              "  0   0   0"
+  "PM_Colors"          "OutputText"            "  0   0   0"
+  "PM_Colors"          "PageBackground"        "255 255 255"
+  "PM_Colors"          "Scrollbar"             "192 192 192"
+  "PM_Colors"          "Shadow"                "128 128 128"
+  "PM_Colors"          "ShadowHiliteBgnd"      "128 128 128"
+  "PM_Colors"          "ShadowHiliteFgnd"      "255 255   0"
+  "PM_Colors"          "ShadowText"            "128 128 128"
+  "PM_Colors"          "TitleBottom"           "128 128 128"
+  "PM_Colors"          "TitleText"             "255 255 255"
+  "PM_Colors"          "Window"                "255 255 255"
+  "PM_Colors"          "WindowFrame"           "128 128 128"
+  "PM_Colors"          "WindowStaticText"      "  0   0 128"
+  "PM_Colors"          "WindowText"            "  0   0   0"
+  "PM_Colors"          "TitlebarTextFont"      "9.WarpSans Bold"
+  "PM_Colors"          "MenuTextFont"          "9.WarpSans Bold"
+  "PM_Colors"          "IconTextFont"          "9.WarpSans"
+  "PM_Colors"          "WindowTextFont"        "9.WarpSans"
+END
+
+STRINGTABLE REPLACEMODE
+BEGIN
+  "PM_Default_Colors"  "ActiveBorder"          "204 204 204"
+  "PM_Default_Colors"  "ActiveTitle"           " 43   0 170"
+  "PM_Default_Colors"  "ActiveTitleText"       "255 255 255"
+  "PM_Default_Colors"  "ActiveTitleTextBgnd"   " 43   0 170"
+  "PM_Default_Colors"  "AppWorkspace"          "204 204 204"
+  "PM_Default_Colors"  "Background"            "  0   0 120"
+  "PM_Default_Colors"  "ButtonDark"            "128 128 128"
+  "PM_Default_Colors"  "ButtonDefault"         "  0   0   0"
+  "PM_Default_Colors"  "ButtonLight"           "255 255 255"
+  "PM_Default_Colors"  "ButtonMiddle"          "204 204 204"
+  "PM_Default_Colors"  "DesktopBackgroundBitmap"       "(none)"
+  "PM_Default_Colors"  "DesktopIconText"       "255 255 255"
+  "PM_Default_Colors"  "DesktopIconTextBackground"  "T"
+  "PM_Default_Colors"  "DialogBackground"      "204 204 204"
+  "PM_Default_Colors"  "EntryField"            "255 255 255"
+  "PM_Default_Colors"  "FieldBackground"       "204 204 204"
+  "PM_Default_Colors"  "FolderIconTextBackground"   "T"
+  "PM_Default_Colors"  "HelpBackground"        "255 255 255"
+  "PM_Default_Colors"  "HelpHilite"            "  0   0 255"
+  "PM_Default_Colors"  "HelpText"              "  0   0   0"
+  "PM_Default_Colors"  "HiliteBackground"      "128 128 128"
+  "PM_Default_Colors"  "HiliteForeground"      "255 255 255"
+  "PM_Default_Colors"  "IconText"              "  0   0   0"
+  "PM_Default_Colors"  "InactiveBorder"        "204 204 204"
+  "PM_Default_Colors"  "InactiveTitle"         "128 128 128"
+  "PM_Default_Colors"  "InactiveTitleText"     "204 204 204"
+  "PM_Default_Colors"  "InactiveTitleTextBgnd" "128 128 128"
+  "PM_Default_Colors"  "Menu"                  "204 204 204"
+  "PM_Default_Colors"  "MenuDisabledText"      "160 160 160"
+  "PM_Default_Colors"  "MenuHilite"            " 43   0 170"
+  "PM_Default_Colors"  "MenuHiliteText"        "255 255 255"
+  "PM_Default_Colors"  "MenuText"              "  0   0   0"
+  "PM_Default_Colors"  "OutputText"            "  0   0   0"
+  "PM_Default_Colors"  "PageBackground"        "255 255 255"
+  "PM_Default_Colors"  "Scrollbar"             "192 192 192"
+  "PM_Default_Colors"  "Shadow"                "128 128 128"
+  "PM_Default_Colors"  "ShadowHiliteBgnd"      "128 128 128"
+  "PM_Default_Colors"  "ShadowHiliteFgnd"      "255 255   0"
+  "PM_Default_Colors"  "ShadowText"            "128 128 128"
+  "PM_Default_Colors"  "TitleBottom"           "128 128 128"
+  "PM_Default_Colors"  "TitleText"             "255 255 255"
+  "PM_Default_Colors"  "Window"                "255 255 255"
+  "PM_Default_Colors"  "WindowFrame"           "128 128 128"
+  "PM_Default_Colors"  "WindowStaticText"      "  0   0 128"
+  "PM_Default_Colors"  "WindowText"            "  0   0   0"
+  "PM_Default_Colors"  "TitlebarTextFont"      "9.WarpSans Bold"
+  "PM_Default_Colors"  "MenuTextFont"          "9.WarpSans Bold"
+  "PM_Default_Colors"  "IconTextFont"          "9.WarpSans"
+  "PM_Default_Colors"  "WindowTextFont"        "9.WarpSans"
+
+  "PM_DISPLAYDRIVERS"      "GRE2VMAN"      "GRE2VMAN"
+  "PM_DISPLAYDRIVERS"      "IBMVGA32"      "IBMVGA32"
+  "PM_DISPLAYDRIVERS"      "CURRENTDRIVER"      "IBMVGA32"
+  "PM_DISPLAYDRIVERS"      "DEFAULTDRIVER"      "IBMVGA32"
+  ""                   ""                      ""
+END
+

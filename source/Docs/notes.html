@@ -1,0 +1,98 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Cristiano Guadagnino">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (OS/2; U) [Netscape]">
+   <title>A Few Notes About MultiDesk</title>
+</head>
+<body>
+
+<h2>
+<img SRC="why.png" ALT="Why?" NOSAVE height=39 width=87></h2>
+It started out as a way to let my wife use my OS/2 partition, 'cause she
+always had problems with her Win95 one. Then, I went ambitious :-)
+<br>&nbsp;
+<h2>
+<img SRC="why2.png" ALT="Why another multi-user-desktop software?" NOSAVE height=40 width=567></h2>
+I tested all commercial/shareware/free packages I could get. Noone satisfied
+me. I wanted to be able to have separate user_ini *AND* separate system_ini,
+so that I could use different desktop enhancers on different desktops (e.g.
+Object Desktop 2.x on one desktop, and XWorkplace on another).
+<br>All tested programs had problems (nearly all were very old), most were
+no more supported, none was flexible enough.
+<br>For a few months I did beta-testing for 'Secure Desktop', but at some
+point it was clear it wasn't going anywhere fast (due to the problems with
+SES). It has now been abandoned.
+<br>So I sat down...
+<br>&nbsp;
+<h2>
+<img SRC="why3.png" ALT="Why the different approach?" NOSAVE height=38 width=381></h2>
+All above packages use the dreaded PrfReset() API, to change the INIs on
+the fly. While this <i>seems</i> a good approach, since it allows changing
+desktop without a reboot, it brings so many problems and limitations that
+after a few experiments I decided to take another route.
+<br>So I opted for the most compatible and documented way: changing the
+USER_INI and SYSTEM_INI variables in the config.sys <i>before</i> the WPS
+loads.
+<br>&nbsp;
+<h2>
+<img SRC="why4.png" ALT="Which are the problems and limitations with PrfReset?" NOSAVE height=68 width=380></h2>
+First of all, PrfReset cannot change the system_ini, so this is a show-stopper,
+if you want to be able to have different registered classes on different
+desktops.
+<p>Also, PrfReset broadcasts the 'PL_ALTERED' message to all message queues
+to indicate that applications should re-read their settings from the new
+set of INI files.. but there are nearly no applications that intercept
+this message.
+<br>Well, applications could be closed upon a desktop switch, so that on
+restart they would pick up the changes... but not all applications can
+be restarted.
+<br>For example, if you have a desktop enhancer (Object Desktop, CandyBarZ,
+Styler/2, XWorkplace, etc..) you can't unload it, because of the way it
+gets loaded upon (or before) WPS start (I won't go into details here, but
+if you want to know more you can write me).
+<p>PM itself won't pick up some changes on desktop switch (e.g. change
+of system fonts in which the standard message boxes are displayed).
+<p>In short, after changing the desktop just once, you end up with a mess
+of the previous desktop settings and the actual ones (at least if you don't
+have a super-simple desktop setup).
+<br>&nbsp;
+<h2>
+<img SRC="why5.png" ALT="Which are the bonuses and downsides you get with µDesk's approach?" NOSAVE height=69 width=508></h2>
+The only downside is that you have to reboot to change desktop (at least
+for now.. see <a href="help.html">Help Me!!</a>). Given all the bonuses
+of this approach, I felt it was a small fee to pay. Also, nowadays' PCs
+boot so fast that it isn't a real problem, other than resetting your uptime
+counter ;-)
+<p>The bonuses are many (also see <a href="suggest.html">Who Needs It?</a>):
+<ul>
+<li>
+Have different user_ini *and* system_ini files for each user.</li>
+
+<li>
+Have different screen resolutions on different desktops/users.</li>
+
+<li>
+Have different WPS enhancers on different desktops/users.</li>
+
+<li>
+Have different WarpCenter configurations on different desktops/users.</li>
+
+<li>
+Have different environment settings based on the user.</li>
+
+<li>
+Have users who don't use the WPS for their desktop (e.g. PC/2, CMD.EXE,
+etc.)</li>
+
+<li>
+Protect some files from other users (mild security)</li>
+</ul>
+
+<p><br>All the above things are simply not possible with the PrfReset approach,
+or are completely new achievements made possible by the fact that &micro;Desk
+loads before the PROTSHELL.
+<br>&nbsp;
+</body>
+</html>

@@ -1,0 +1,69 @@
+.. ----------------------------------------
+.1 Revision history
+.. ----------------------------------------
+.an REVISION_HISTORY
+.
+Select one of the following topics:
+.su V30 u
+
+.. ----------------------------------------
+.2 file__id.diz
+.. ----------------------------------------
+.
+.fo off
+.include file_id.diz
+.fo on
+
+.. ----------------------------------------
+.2 Version 1.02
+.. ----------------------------------------
+.
+_*Fixed/Updated:*_
+.ul
+- added command
+.sl compact
+  - [.CMD_ELIST]
+.el
+.
+  to allow to end a list level in nested lists or multilevel lists
+  in order to allow adding text after a list (level).
+- added support for nested lists created by the commands
+.sl compact
+  - [.CMD_SLIST], [.CMD_OLIST], [.CMD_ULIST] and [.CMD_PLIST]
+- changed access to sourcefile to readonly (important when using TVFS)
+- added detection for empty [.CMD_HEADER header] text
+- changed INF title from *Compiler Reference* to *IPF Preprocessor Reference*
+
+_*New:*_
+.ul
+- added source samples with comparison to IPF code
+- added support of attribute characters also for [.ESC_LINKS http links]
+
+.. ----------------------------------------
+.2 Version 1.01
+.. ----------------------------------------
+.
+_*Fixed/Updated:*_
+.ul
+- lines with a period as first non-whitespace character within a list got lost
+- commandline parameter */?* did not display help
+- external or internet links with text got link text still appended to URL
+- documentation update for
+  - [.CMD_IF] commands:
+.
+  conditional compile may not be nested
+  - [.CMD_SET] command:
+.
+  variables set with the .SET command are resolved at the end of the document only
+
+_*New:*_
+.ul
+- text replacement implemented for parmeters to commands
+- [.CMD_IF] commands now can handle multiple conditions
+
+.. ----------------------------------------
+.2 Version 1.00
+.. ----------------------------------------
+.
+First public release
+

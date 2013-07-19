@@ -1,0 +1,57 @@
+/* mmit.rc: (M)ulti(M)edia (I)ni (T)emplate rc file for use by ÊDesk  */
+/* ------------------------------------------------------------------ */
+
+/**********************************************************************/
+/* ÊDesk - Multiple desktops/users application for OS/2               */
+/*         Copyright 2000-2001 Cristiano Guadagnino                   */
+/**********************************************************************/
+
+CODEPAGE 850
+
+STRINGTABLE
+BEGIN
+
+  ""
+  ""
+  ""
+  ""
+  ""
+  ""
+  ""
+  ""
+  ""
+  ""
+
+  "MMPM2_AlarmSoundsError"    "Error"            "5045"
+
+  "MMPM2_AlarmSounds"         "0"                "#Warning#70"
+  "MMPM2_AlarmSounds"         "1"                "#Information#70"
+  "MMPM2_AlarmSounds"         "2"                "#Error#70"
+  "MMPM2_AlarmSounds"         "3"                "#Opening window (Animated)#70"
+  "MMPM2_AlarmSounds"         "4"                "#Closing window (Animated)#70"
+  "MMPM2_AlarmSounds"         "5"                "#Begin drag#70"
+  "MMPM2_AlarmSounds"         "6"                "#End drag#70"
+  "MMPM2_AlarmSounds"         "7"                "#System startup#70"
+  "MMPM2_AlarmSounds"         "8"                "#System shutdown#70"
+  "MMPM2_AlarmSounds"         "9"                "#Shred#70"
+  "MMPM2_AlarmSounds"         "10"               "#Lockup#70"
+  "MMPM2_AlarmSounds"         "11"               "#Alarm Clock#70"
+  "MMPM2_AlarmSounds"         "12"               "#Printer error#70"
+  "MMPM2_AlarmSounds"         "997"              "#<Try it>#70"
+
+  "WEPM_Effects"              "Echo..."          "wepmplus,EffectEcho,wepmplus.hlp,100"
+  "WEPM_Effects"              "Reverse"          "wepmplus,EffectReverse,wepmplus.hlp,104"
+  "WEPM_Effects"              "Reverb..."        "wepmplus,EffectReverb,wepmplus.hlp,101"
+  "WEPM_Effects"              "Fade out"         "wepmplus,EffectLinearFadeOut,wepmplus.hlp,103"
+  "WEPM_Effects"              "Fade in"          "wepmplus,EffectLinearFadeIn,wepmplus.hlp,102"
+  "WEPM_Effects"              "Half-speed"       "wepmplus,EffectHalfSpeed,wepmplus.hlp,106"
+  "WEPM_Effects"              "Double-speed"     "wepmplus,EffectDoubleSpeed,wepmplus.hlp,105"
+  "WEPM_Effects"              "Maximize volume"  "wepmplus,EffectHyperExpand,wepmplus.hlp,107"
+
+  "MMPM2_AlarmSoundsData"     "ApplyVolumeToAll" "TRUE"
+  "MMPM2_AlarmSoundsData"     "EnableSounds"     "FALSE"
+  "MMPM2_AlarmSoundsData"     "Volume"           "50"
+
+  ""                          ""                 ""
+END
+

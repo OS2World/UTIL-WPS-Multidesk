@@ -1,0 +1,16 @@
+Known problems and limitations:
+
+   . Case sensitiveness of names and passwords. (Is it desireable?)
+   
+   . Differences in this respect between MuDesk and MuAdmin. (verify)
+   
+   . The desktop archiving feature of OS/2 does not cope with multiple desktops.
+     Users should use another archiving product.
+   
+   . Keep users' directory name as short as possible. User names, also.
+     (This is an OS/2 problem with length of pathnames)
+   
+   . Users should check the Groups.csv file, to see if it matches their
+     INI files: Application and Key names may vary with nationalized
+     OS/2 versions.
+    

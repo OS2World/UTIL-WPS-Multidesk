@@ -1,0 +1,19 @@
+# -- MuDesk time table file --
+#
+# Users specified in this file become the default user for the indicated
+# time interval. For unspecified time intervals, the default user specified
+# in <mudesk.cfg> is used.
+#
+# You CANNOT specify a time interval in which the default user is the root
+# user.
+#
+# Times are specified in 24-hours mode. Ending_time must be greater than
+# starting_time.
+#
+#-----------------------------------------------------------------------------
+# SMTWTFS    Starting time             Ending time             User
+#  
+  -xxxxx-    08:00                     17:29                   Anna
+  -xxxxx-    17:30                     23:59                   Cris
+  -xxxxx-    00:00                     07:59                   Cris  
+  x-----x    00:00                     23:59                   Cris

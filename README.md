@@ -7,9 +7,13 @@ LICENSE
 ===============
 - GNU GPL V2
 
+REQUIREMENTS
+===============
+* FastINI
+
 COMPILE TOOLS
 ===============
-* REXX
+* REXX, REXXINIT, 
 
 AUTHORS
 ===============

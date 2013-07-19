@@ -1,0 +1,191 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Cristiano Guadagnino">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (OS/2; U) [Netscape]">
+   <title>Sample Configuration File</title>
+</head>
+<body>
+
+<dl>
+<center>
+<h1>
+<img SRC="sampcfg.png" ALT="Sample Configuration File" NOSAVE height=42 width=371></h1></center>
+
+<dd>
+<tt></tt></dd>
+
+<dd>
+<tt># -- MuDesk configuration file --</tt></dd>
+
+<dd>
+<tt>#</tt></dd>
+
+<dd>
+<tt># !!!! Don't put spaces around the "=" sign !!!!</tt></dd>
+
+<dd>
+<tt>#</tt></dd>
+
+<dd>
+<tt>#-----------------------------------------------------------------------------</tt></dd>
+
+<dd>
+<tt># The system will automatically login this user after default_user_timeout</tt></dd>
+
+<dd>
+<tt># seconds, if this variable is set. You can comment it out, or leave
+it blank</tt></dd>
+
+<dd>
+<tt># to disable automatic login.</tt></dd>
+
+<dd>
+<tt># Note that setting the timeout to 0 will also disable auto-login.</tt></dd>
+
+<dd>
+<tt>#</tt></dd>
+
+<dd>
+<tt>default_user=cris</tt></dd>
+
+<dd>
+<tt>default_user_timeout=20</tt></dd>
+
+<dd>
+<tt>#</tt></dd>
+
+<dd>
+<tt>#-----------------------------------------------------------------------------</tt></dd>
+
+<dd>
+<tt># The root user is the user that has access to all the log files, the</tt></dd>
+
+<dd>
+<tt># config files, etc. Here you tell how the root user is named. Default
+is</tt></dd>
+
+<dd>
+<tt># 'root'.</tt></dd>
+
+<dd>
+<tt>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !! IT IS NOT POSSIBLE
+TO SET DEFAULT_USER = ROOT_USER !!</tt></dd>
+
+<dd>
+<tt>#</tt></dd>
+
+<dd>
+<tt>root_user=root</tt></dd>
+
+<dd>
+<tt>#</tt></dd>
+
+<dd>
+<tt>#-----------------------------------------------------------------------------</tt></dd>
+
+<dd>
+<tt># If this is set to YES, then MuDesk will NOT ask to enter a password.
+Also,</tt></dd>
+
+<dd>
+<tt># this enables starting the default_user by simply pressing "ENTER"
+when the</tt></dd>
+
+<dd>
+<tt># login prompt shows. Default is NO.</tt></dd>
+
+<dd>
+<tt># Note however that log files, config files, etc are still locked to
+everyone</tt></dd>
+
+<dd>
+<tt># but the root_user (which will always require a password).</tt></dd>
+
+<dd>
+<tt>#</tt></dd>
+
+<dd>
+<tt>relaxed_security=NO</tt></dd>
+
+<dd>
+<tt>#</tt></dd>
+
+<dd>
+<tt>#-----------------------------------------------------------------------------</tt></dd>
+
+<dd>
+<tt># After ssaver_timeout seconds without user interaction, the screen
+will be</tt></dd>
+
+<dd>
+<tt># blanked. Note that screen blanking is never disabled. If you do not
+specify</tt></dd>
+
+<dd>
+<tt># it, it will be set to the default of 120 seconds.</tt></dd>
+
+<dd>
+<tt>#</tt></dd>
+
+<dd>
+<tt>ssaver_timeout=60</tt></dd>
+
+<dd>
+<tt>#</tt></dd>
+
+<dd>
+<tt>#-----------------------------------------------------------------------------</tt></dd>
+
+<dd>
+<tt># If this is set to YES, all logins will be logged to the log_users_file
+file.</tt></dd>
+
+<dd>
+<tt># Note that this file will be readable only by the root user.</tt></dd>
+
+<dd>
+<tt>#</tt></dd>
+
+<dd>
+<tt>log_users=YES</tt></dd>
+
+<dd>
+<tt>log_users_file=E:\SysBoot.Log</tt></dd>
+
+<dd>
+<tt>#</tt></dd>
+
+<dd>
+<tt>#-----------------------------------------------------------------------------</tt></dd>
+
+<dd>
+<tt># This is where the users tree is created by default. This is only
+used by</tt></dd>
+
+<dd>
+<tt># administration program.</tt></dd>
+
+<dd>
+<tt># You can override this setting&nbsp; on a one-by-one basis, by using
+the</tt></dd>
+
+<dd>
+<tt># administration program.</tt></dd>
+
+<dd>
+<tt>#</tt></dd>
+
+<dd>
+<tt>users_tree=E:\Users</tt></dd>
+
+<dd>
+<tt>#</tt></dd>
+
+<dd>
+<tt># -- end of cfg file --</tt></dd>
+</dl>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+   I guess I could follow the Linux/Unix community and call this
+   How To: Multi User CandyBarZ
+
+   Or,  "To each User a CandybarZ?"
+
+   PLEASE: Read this through carefully BEFORE following the instructions.
+
+   CandyBarZ is, I find, an almost indispensible "WPS beautifier". The
+   trouble is so do several other people using this PC and they insist on
+   having access to it. I would not mind if every User had their "own"
+   CandyBarZ scheme - I do object to having to reset my scheme when another
+   User changes their scheme though.
+
+   The problem is the CandyBar.INI file. In the Documentation for CandyBarZ
+   there is talk of being able to select the location for the CandyBar.INI
+   file. Something I have never seen on the Setup screen for CandyBarZ V1.40.
+
+   Using INIEditor V1.10 (from [1]http://Goran_Ivankovic.tripod.com/  look
+   for INITOOL110.ZIP) I inspected the OS2.INI file and found 2 Keys for
+   Application CandyBarz. The Key called Profile stores the location of the
+   candybar.ini file.
+
+   Yes I tried to set this up the easy way but it does not work. CandyBarZ
+   seems to check it's INI file location once only and possibly save that
+   location within the program. I installed CandyBarZ for 4 Users in total
+   (one at a time) and edited each Users OS2.INI file to change the CandyBarZ
+   Profile to the Users home directories (\Users\matty\ , \Users\nicki\ 
+   etc..) before rebooting.
+
+   The only candybar.ini file recognised was the first one used!
+
+   Well, as that don't work we can always do some "INI file swapping".
+   However we cannot do this in an OS/2 CommandFile after the system has
+   loaded. CandyBarZ needs to be able to access it's INI file at startup -
+   otherwise your beautiful desktop fails to load and you end up with that
+   slightly-old-clunky OS/2 look.
+
+   This has a lot  of similarity to the Sound Scheme problem. To solve that I
+   had to modify the Pre and Post Login scripts; which is what I have done
+   here. Please feel free to use these modifications in your own system if
+   you wish.
+
+   Please make sure that you follow these instructions carefully to get
+   "Multi User CandyBarZ" working correctly - I am not offering guarantees,
+   but get one little thing wrong and it definitely will not work.
+
+   Setup Steps
+
+   To avoid problems it is best to Uninstall CandyBarZ from all Users
+   Desktops where it is currently Installed. You can use the CandyBarZ Setup
+   Uninstall and follow it with an Install to minimize reboots if you have
+   several Users - there are 4 on this PC. Do not delete the CandyBarZ files
+   or directory. You should, after a bout of reboots, have UNinstalled and
+   then re-INstalled CandyBarZ on all Users Desktops.
+
+   It is best to Install CandyBarZ for every User. If a User does not want
+   these enhancements it is easy enough to set CandyBarZ to the Empty theme,
+   which is a standard Warp 4 theme.
+
+   Having performed all of the installations it is now necessary to reboot to
+   start CandyBarZ for the first time and create the default CandyBar.ini
+   file. NOTE that so far all we have done is Install CandyBarZ and reboot to
+   Login as the next User to perform the CandyBarZ Install for that User
+   until all Users have CandyBarZ installed.
+
+   Reboot and Login as the Administrator and you should be rewarded by the
+   Default CandyBarZ Theme making your Desktop more interesting. DO NOT
+   change any settings at this time.
+
+   Instead, copy the CandyBar.ini file from the CandyBarZ Directory to the
+   Home Directory of every User - thats right give everyone a copy of this
+   INI file. Just to jog your memory - I discovered that CandyBarZ
+   "recognises" the correct INI file, the one it knows that it created,
+   somehow. So every User MUST have a copy of this file to start with. You
+   will also need to keep a copy safe somewhere on your system in case you
+   ever add a New User, in which case you will need to give the New User a
+   copy of this file.
+
+   OK every User has CandyBarZ installed and a copy of the INI file. Time to
+   update the Pre and Post Login scripts.
+
+   The Script Modifications
+
+   STEP 1
+
+   This is the section to add to the Pre-Login script, "mdstart.cmd", which
+   should be located in your MultiDesk Directory, "\apps\mudesk" or
+   "\mudesk", wherever that may be. This bit of script will copy the
+   candybar.ini file from the \CandyBarZ directory to the Directory of the
+   User named in the file Last - who should be the last User so it should be
+   their copy of candybar.ini with their scheme.
+
+   Open the file \mudesk\mdstart.cmd with the System Editor
+
+   Select the following block of text in green and copy it (ALT+E, C)
+
+   /* Save previous User CandyBarZ.INI file to previous User directory */
+   /* Modified 09/08/2001 by Pete Brown */
+   /* NOTE: The statement "DrivePath = 'J:\CandyBarZ'" below MUST be changed
+   to */
+   /* the correct Drive:\Path location of CandyBarZ for other systems that
+   this script is used on */
+   CBarZINIPath = UTreePath || LastUser
+   DrivePath = 'J:\CandyBarZ'
+   '@copy ' || DrivePath || '\CandyBar.ini ' || CBarZINIPath || ' 1> nul 2>
+   nul'
+   /* End Pete Brown modification */
+
+   Then, in the System Editor,  Paste (ALT+P) the selected text above the
+   line
+          DestPath = UTreePath || LastUser || '\WC'
+
+   Handy that the System Editor does not recognise green unless set to
+   display in that colour - the text pasted should now be the same colour as
+   the existing text :-)
+
+   Before Saving this modified file it is necessary to change the statement
+   "DrivePath = 'J:\CandyBarZ'". You will need to change this to the
+   Drive:\Location of CandyBarZ on your system eg:-
+      DrivePath = 'e:\toys\CandyBarZ'
+   or
+      DrivePath = 'C:\CandyBarZ'
+
+   Then Save the file, selecting to overwrite the existing file
+   (mdstart.cmd). Do not close the System Editor.
+
+   NOTE: If you have used the modified Pre and Post Login scripts to enable
+   Users to have different Sound Schemes make sure that the "mdstart.cmd"
+   file that you modify is the version that includes the Sound modifications.
+   Your original script - without the Sound section - should be called
+   "mdstart.cmd.ORG" but do double-check.
+
+   STEP 2
+
+   This is the section to add to the Post-Login script, "mdstart.usr", which
+   should be located in your MultiDesk Directory, "\apps\mudesk" or
+   "\mudesk", wherever that may be. This bit of script will copy the
+   candybar.ini file from the Users Home Directory to the CandyBarZ Directory
+   after the User has successfully Logged On.
+
+   Still in the System Editor click File, Open and select the mudesk.usr file
+   - the template for the Post Login script.
+
+   Select the following block of text in green and copy it (ALT+E, C)
+
+   /* Save previous User CandyBarZ.INI file to previous User directory */
+   /* Modified 09/08/2001 by Pete Brown */
+   /* NOTE: The statement "DrivePath = 'J:\CandyBarZ'" below MUST be changed
+   to */
+   /* the correct Drive:\Path location of CandyBarZ for other systems that
+   this script is used on */
+   CBarZINIPath = UTreePath || User
+   DrivePath = 'J:\CandyBarZ'
+   '@del ' || DrivePath || '\CandyBar.ini 1> nul 2> nul'
+   '@copy ' || CBarZINIPath || '\CandyBar.ini ' || DrivePath || ' 1> nul 2>
+   nul'
+   /* End Pete Brown modification */
+
+   Then, in the System Editor,  Paste (ALT+P) the selected text above the
+   line
+          OrgPath = UTreePath || User || '\WC'
+
+   Again, before Saving this modified file it is necessary to change the
+   statement "DrivePath = 'J:\CandyBarZ'". You will need to change this to
+   the Drive:\Location of CandyBarZ on your system eg:-
+      DrivePath = 'e:\toys\CandyBarZ'
+   or
+      DrivePath = 'C:\CandyBarZ'
+
+   Then Save the file, selecting to overwrite the existing file
+   (mdstart.usr).
+
+   Close the System Editor and open the Properties notebook for the
+   mdstar.usr file. Make sure that the Type property is "OS/2 Command File".
+
+   Now copy this file "mdstart.usr", renaming it as part of the copy process
+   to  "mdstart.cmd", to each Users Directory and selecting to overwrite the
+   existing file.
+
+   NOTE: If you have used the modified Pre and Post Login scripts to enable
+   Users to have different Sound Schemes make sure that the "mdstart.usr"
+   file that you modify is the template that includes the Sound
+   modifications. Your original template - without the Sound section - should
+   be called "mdstart.usr.ORG" but do double-check.
+
+   That's It
+
+   You should now have CandyBarZ installed for every User, complete with
+   their own copy of CandyBar.ini and both Pre and Post Login scripts
+   modified to shuffle these INI files around.
+
+   Just to prove the point you should now change the current (should be
+   Administrator) Users CandyBarZ scheme from the Default.
+   Having selected a scheme, applied and saved  it Open the CandyBarZ
+   directory in Details View and check the size of the CandyBar.ini file. It
+   should be a different size from the copies made and saved to other Users
+   Directories before you changed the scheme.
+
+   Now it's time to reboot and Login as a different User. You should get the
+   Default scheme, not the scheme that you just applied to the Administrators
+   Desktop.
+
+   If you do get stuck somehow please email me with full details of what went
+   wrong, how many User Desktops and Drive:\Directory locations for
+   CandyBarZ, OS2 Boot Drive, MultiDesk Directory - in fact, anything that
+   you think could be relevant.
+
+   At this point in time I can only state that the above description of "How
+   To: Multi User CandyBarZ" has worked on the only 2 PCs running OS/2 that I
+   have access to.
+
+   For reference both PCs are running:-
+     * Warp 4 Fixpack 15 + Kernel 14.072a_W4, DDPak 2, IBMs' SDD 704,
+       MultiDesk V0.2.0, CandyBarZ V1.40
+   Happy Individual Visual Desktops :-)
+
+   Pete        email: losepete@cwcom.net

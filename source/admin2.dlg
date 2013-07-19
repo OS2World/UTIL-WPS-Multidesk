@@ -1,0 +1,39 @@
+#include "OS2.H"
+
+DLGTEMPLATE 100 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG "", 100, 110, 65, 344, 189, 
+           WS_SYNCPAINT | NOT FS_DLGBORDER | FS_SIZEBORDER, FCF_NOBYTEALIGN
+    BEGIN
+        CONTROL         "admin2:#1", 210, 6, 26, 30, 137, "BILLBOARD",
+                        WS_VISIBLE | 12
+        CONTROL         "", 203, 45, 28, 283, 155, WC_CONTAINER,
+                        WS_VISIBLE | WS_TABSTOP | CCS_SINGLESEL | CCS_AUTOPOSITION | CCS_VERIFYPOINTERS
+        CONTROL         "mdicons:#2", 207, 47, 9, 20, 16, "ICONBUTTON",
+                        WS_VISIBLE
+        CONTROL         "mdicons:#3", 208, 76, 9, 20, 16, "ICONBUTTON",
+                        WS_VISIBLE
+        CONTROL         "mdicons:#7", 206, 306, 9, 20, 16, "ICONBUTTON",
+                        WS_VISIBLE
+        CONTROL         "", 214, 105, 9, 193, 16, "CANVAS",
+                        WS_VISIBLE | WS_CLIPSIBLINGS | 24640
+        CONTROL         "", 202, 43, 6, 287, 179, WC_STATIC,
+                        WS_VISIBLE | WS_CLIPSIBLINGS | SS_BKGNDRECT
+        CONTROL         "mdctrls:#1", 211, 334, 178, 9, 7, "ICONBUTTON",
+                        WS_VISIBLE
+        CONTROL         "mdctrls:#3", 212, 334, 167, 9, 7, "ICONBUTTON",
+                        WS_VISIBLE
+        CONTROL         "mdctrls:#2", 213, 334, 156, 9, 7, "ICONBUTTON",
+                        WS_VISIBLE
+        CONTROL         "mdctrls:#6", 304, 334, 43, 9, 7, "ICONBUTTON",
+                        WS_VISIBLE
+        CONTROL         "mdctrls:#7", 305, 334, 32, 9, 7, "ICONBUTTON",
+                        WS_VISIBLE
+        CONTROL         "mdctrls:#8", 306, 334, 5, 9, 7, "ICONBUTTON",
+                        WS_VISIBLE
+        CONTROL         "", 209, 4, 4, 34, 182, "CANVAS",
+                        WS_VISIBLE | WS_CLIPSIBLINGS | 1072
+        CONTROL         "", 201, 41, 4, 291, 182, "CANVAS",
+                        WS_VISIBLE | WS_CLIPSIBLINGS | 1088
+    END
+END

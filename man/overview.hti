@@ -1,0 +1,50 @@
+.. ----------------------------------------
+.1 Overview
+.. ----------------------------------------
+.an OVERVIEW
+.
+This is a quick introduction, that should reply to the questions:
+.ul
+- what is [=TITLE]?
+- what does it do?
+- why would you want to use it?
+- which are the main features?
+
+[=TITLE] was born out of my need to have separate desktops for me and my wife.
+My wife is not very computer-literate, and she knows nothing about OS/2, but she
+has the need to use computers for her work. I wanted to let her use OS/2,
+without the fear of her breaking my desktop or deleting valuable items.
+
+So here is what [=TITLE] is and what does it do: it will let you create
+desktops for as many users as you want. [=TITLE] keeps desktops *completely*
+separate: one destroyed desktop does not corrupt other desktops. You can simply
+delete it and re-create it from scratch or from a backup.
+
+You may want to use it for your wife and/or your children, like me.
+
+It is also a good tool for experimenting with WPS hacking, without the fear of
+breaking your beloved ultra-customized desktop.
+
+You may have corrupt INIs, but don't want to rebuild the desktop from scratch:
+simply [.USAGE_MUADMIN build] another desktop, then you can [.USAGE_TIPS transfer]
+the good pieces from the old desktop to the new one. When you're done you delete
+the old one and use your newly created one.
+
+Actually, [=TITLE] does something more to your system: it introduces the concept
+of #multiple users# to OS/2. Once MultiDesk is installed you will need to #login#
+when you boot OS/2, and if you aren't the *#administrator#* (*#root#* for those
+with a unix background) you won't have access to certain items.
+
+You may ask why I wrote it from scratch rather than using one of the many other
+software products that have similar functions. You'll find your reply [.TECH here].
+
+You have to understand though that [=TITLE] is a work in progress. It isn't
+complete by any means, and you will probably find bugs and unimplemented
+features. They will be implemented as time goes by, provided I have enough free
+time. Before you ask: I'm considering an open-source release, but don't hold your
+breath.
+
+
+Select one of the following topics:
+.su u -1
+

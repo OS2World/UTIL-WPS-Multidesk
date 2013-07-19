@@ -1,0 +1,13 @@
+LIBRARY AuxFuncs INITINSTANCE LONGNAMES
+PROTMODE
+DESCRIPTION 'MultiDesk Auxiliary Functions $Revision: 1.4 $ - (C) Cristiano Guadagnino 2000, 2001'
+DATA MULTIPLE NONSHARED
+EXPORTS
+    AFGETBOOTDRIVE      = AFGetBootDrive      @1
+    AFGETOBJECTHANDLE   = AFGetObjectHandle   @2
+    AFGETABSPATH        = AFGetAbsPath        @3
+    AFDELTREE           = AFDelTree           @4
+    AFCRYPT             = AFCrypt             @5
+    AFLOADFUNCS         = AFLoadFuncs         @6
+    AFDROPFUNCS         = AFDropFuncs         @7
+

@@ -1,0 +1,279 @@
+<WARPIN OS="OS2_4x">
+  <HEAD>
+    <!-- here come the packages -->
+    <PCK INDEX=1
+         PACKAGEID="Cristiano Guadagnino\MultiDesk\Executables\0\2\0"
+         TITLE="MultiDesk executables"
+         TARGET="$(WARPIN_DEFAULTAPPSPATH)\MuDesk"
+         BASE
+         SELECT
+         REQUIRES=2
+         CONFIGSYS="RUN=$(1)\rexinit.exe|ADDBEFORE(PROTSHELL)"
+         CONFIGSYS="PROTSHELL=$(1)\mudesk.exe|UNIQUE"
+         CONFIGSYS="SET USER_INI=0|UNIQUE"
+         CONFIGSYS="SET SYSTEM_INI=0|UNIQUE"
+         CONFIGSYS="SET RUNWORKPLACE=0|UNIQUE"
+         CONFIGSYS="SET USER_INI=0|REMOVELINE"
+         CONFIGSYS="SET SYSTEM_INI=0|REMOVELINE"
+         CONFIGSYS="SET RUNWORKPLACE=0|REMOVELINE"
+         CONFIGSYS="SET SHELLHANDLESINC=50|UNIQUE"
+         CONFIGSYS="LIBPATH=.;|ADDLEFT"
+         CREATEOBJECT="WPFolder|MultiDesk Folder|<WP_DESKTOP>|OBJECTID=<MUDESK_FOLDER>;"
+         CREATEOBJECT="WPProgram|MultiDesk Administrator|<MUDESK_FOLDER>|EXENAME=$(1)\muadmin.exe;STARTUPDIR=$(1);OBJECTID=<MUADMIN>;ICONFILE=$(1)\muadmin.ico;"
+         CREATEOBJECT="WPProgram|MultiDesk^login banner|<MUDESK_FOLDER>|EXENAME=e.exe;PARAMETERS=mudesk.bnr;STARTUPDIR=$(1);OBJECTID=<MDBANNER>;ICONFILE=$(1)\datafile.ico;"
+         CREATEOBJECT="WPProgram|MultiDesk^configuration file|<MUDESK_FOLDER>|EXENAME=e.exe;PARAMETERS=mudesk.cfg;STARTUPDIR=$(1);OBJECTID=<MDCFGFILE>;ICONFILE=$(1)\datafile.ico;"
+         CREATEOBJECT="WPProgram|MultiDesk^locked files|<MUDESK_FOLDER>|EXENAME=e.exe;PARAMETERS=mudesk.lck;STARTUPDIR=$(1);OBJECTID=<MDLOCKED>;ICONFILE=$(1)\locked.ico;"
+         EXECUTE="$(1)\firstcfg.cmd ?:\ $(USER_INI) $(SYSTEM_INI) $(1)"
+         >MultiDesk - Multiple desktops/users for OS/2</PCK>
+    <PCK INDEX=2
+         PACKAGEID="Cristiano Guadagnino\MultiDesk\FastIni Library\98\148"
+         TITLE="FastIni Library"
+         TARGET="?:\OS2\DLL"
+         SELECT
+         >FastIni - Fast INI access library by Dennis Bareis</PCK>
+    <PCK INDEX=3
+         PACKAGEID="Cristiano Guadagnino\MultiDesk\Documentation\0\2\0"
+         TITLE="MultiDesk documentation"
+         TARGET="$(1)\Docs"
+         SELECT
+         CREATEOBJECT="WPFolder|MultiDesk Folder|<WP_DESKTOP>|OBJECTID=<MUDESK_FOLDER>;"
+         CREATEOBJECT="WPFolder|MultiDesk^Documentation|<MUDESK_FOLDER>|OBJECTID=<MUDESK_DOCS>;"
+         CREATEOBJECT="WPProgram|MultiDesk User Guide|<MUDESK_DOCS>|EXENAME=view.exe;PARAMETERS=mudesk.inf;STARTUPDIR=$(3);OBJECTID=<MDGUIDE>;"
+         CREATEOBJECT="WPProgram|Read Me|<MUDESK_DOCS>|EXENAME=e.exe;PARAMETERS=readme.txt;STARTUPDIR=$(3);OBJECTID=<MDREADME>;ICONFILE=$(1)\datafile.ico;"
+         CREATEOBJECT="WPProgram|Bugs|<MUDESK_DOCS>|EXENAME=e.exe;PARAMETERS=bugs.txt;STARTUPDIR=$(3);OBJECTID=<MDBUGS>;ICONFILE=$(1)\datafile.ico;"
+         CREATEOBJECT="WPProgram|History|<MUDESK_DOCS>|EXENAME=e.exe;PARAMETERS=history.txt;STARTUPDIR=$(3);OBJECTID=<MDHIST>;ICONFILE=$(1)\datafile.ico;"
+         CREATEOBJECT="WPProgram|ToDo|<MUDESK_DOCS>|EXENAME=e.exe;PARAMETERS=todo.txt;STARTUPDIR=$(3);OBJECTID=<MDTODO>;ICONFILE=$(1)\datafile.ico;"
+         CREATEOBJECT="WPProgram|FAQ|<MUDESK_DOCS>|EXENAME=e.exe;PARAMETERS=FAQ.txt;STARTUPDIR=$(3);OBJECTID=<MDFAQ>;ICONFILE=$(1)\datafile.ico;"
+         >MultiDesk User Guide and documents</PCK>
+  </HEAD>
+  <BODY>
+    <!-- here comes page 1 -->
+    <PAGE INDEX=1 TYPE=README>
+      <NEXTBUTTON TARGET=2>~Next</NEXTBUTTON>
+      <TEXT>
+        Please read through all of the following before installing.
+        Then select "Next" to continue.
+        Select "Cancel" to abort installation.
+      </TEXT>
+      <README FORMAT=PLAIN>
+
+      MultiDesk 0.2.0 README
+      (C) Cristiano Guadagnino, May 16, 2001
+      Last updated May 17, 2001
+
+
+      0. CONTENTS OF THIS FILE
+      ========================
+
+          1. INTRODUCTION
+          2. INSTALLATION
+          3. UPGRADE
+          4. DEINSTALLATION
+          5. LICENSE, COPYRIGHT, DISCLAIMER
+          6. CREDITS
+          7. CONTACT
+
+
+      1. INTRODUCTION
+      ===============
+
+          Welcome to MultiDesk V0.2.0.
+
+          MultiDesk is a program to enhance OS/2 (very) limited
+          capabilities in managing multiple desktops and/or users.
+
+
+          About this release
+          ------------------
+
+          This is a BETA version of MultiDesk, and as such it may
+          include bugs or missing features.
+
+
+      2. INSTALLATION
+      ===============
+
+          MultiDesk must be installed using WarpIN.
+
+          ---> It is VERY important to MAKE A WPS BACKUP before
+               installing and using.
+
+          After installation, you can reboot to have MultiDesk started
+          for the first time.
+
+          MultiDesk will start with the current user configured as
+          adminstrator ("root") user. Username and password are
+          as follows:
+
+            user: admin
+            password: admin
+
+          You'll find a "MultiDesk" folder on the desktop, and you
+          can launch the administration program to start creating
+          your new users/desktops!
+
+          Please note that the administration program still has
+          many unimplemented features.
+
+
+          Note: Use WarpIN V0.9.8 or higher to install this archive.
+          Version 0.9.6 had a nasty bug with target paths which was
+          kind of annoying.
+
+
+      3. UPGRADE
+      ==========
+
+          While it would be possible to upgrade to the new release, it
+          is preferable to completely reinstall the package, due to the
+          many differences and improvements in this release.
+
+          To reinstall keeping your current desktops, follow the
+          steps below:
+
+          1) Backup your x:\Users directory (where x:\Users refers to
+             the directory where you keep your users). This should not
+             be necessary, but better safe than sorry.
+
+          2) Reboot as root.
+
+          3) Also backup your mudesk.cfg and mudesk.dat file.
+
+          4) Remove MultiDesk with WarpIn (not necessary).
+          
+          5) If you've not removed MultiDesk, remove the read-only
+             attribute from firstcfg.cmd (attrib -r firstcfg.cmd).
+
+          6) Install the new release.
+
+          7) Look if your users directories are all OK. If not,
+             restore the wrong files from the backup. NOTE that
+             there should be some new files and directories: this
+             is OK.
+
+          8) All users directories must have a WC subdirectory for
+             multi-WarpCenter management. Add it as necessary.
+
+             For the same reason, all users must have a mdstart.cmd
+             file. The admin user should have this file automatically
+             created; for the other users, copy the mdstart.usr 
+             (NOTE the extension!!) file, and rename it to mdstart.cmd.
+
+          9) Restore your mudesk.cfg and mudesk.dat files, if
+             necessary (they shouldn't have been modified).
+
+         10) Since this release features multi-WarpCenter management,
+             it is advisable to backup you WarpCenter configuration,
+             just to be sure. To do this, you can ZIP the DOCK*.CFG
+             files in x:\OS2\DLL (where x: is your boot drive), and
+             the SCENTER.CFG file in the same directory.
+
+         11) You can now reboot.
+
+         
+      4. DEINSTALLATION
+      =================
+
+          Upon deinstallation with WarpIn, the "documentation" package
+          does not get removed from the database.
+
+          This is because WarpIn tries to remove the documentation
+          objects after that it has removed the folder. Not finding
+          those objects it fails, and doesn't remove the package.
+
+          Rest assured that the objects have been removed from disk.
+          You can safely remove the package from the database (using
+          it's context-menu in WarpIn).
+
+
+      5. LICENSE, COPYRIGHT, DISCLAIMER
+      =================================
+
+          Copyright (C) 2001 Cristiano Guadagnino.
+
+          This program is free software; you can redistribute it,
+          provided you don't ask a fee for it.
+
+          The source code is NOT available (at least for now).
+
+          This program is distributed in the hope that it will be useful,
+          but WITHOUT ANY WARRANTY; without even the implied warranty of
+          MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+      6. CREDITS
+      ==========
+
+          I would like to say THANKS to a number of people that helped
+          me during the development of MultiDesk. They're listed in no
+          particular order. I've only a limited memory, and surely am
+          forgetting some names. If you think I forgot to mention
+          someone, plase write me.
+
+          Yuri Dario    For many useful suggestions, and for pushing
+                        me to implement some needed features.
+
+          Georg Haschek For letting me have the sources of his invaluable
+                        "SaveFolder" utility, and letting me use them at
+                        my will. Georg, your sources have been a source
+                        of inspiration, and an incredible learning tool.
+
+          Paulo Dias    For taking the time to debug a tricky situation
+                        where MultiDesk Administrator would not work.
+
+          Netlabs       For their NOSA client interface to CVS.
+
+          IBM           For a great operating system, and great
+                        development tools.
+
+
+      7. CONTACT
+      ==========
+
+          Cristiano Guadagnino
+
+          TeamOS/2 Italy member
+          OS/2 Warp Certified Engineer
+
+          criguada@tin.it
+          criguada@libero.it
+      
+      </README>
+      <NEXTBUTTON TARGET=2>~Next</NEXTBUTTON>
+    </PAGE>
+    <!-- here comes page 2 -->
+    <PAGE INDEX=2 TYPE=CONTAINER>
+      <NEXTBUTTON TARGET=3>~Next</NEXTBUTTON>
+      <TEXT>
+      Note that FastIni need NOT be installed along the libpath: it can be installed in the same directory as MultiDesk.
+      However, installing in the libpath gives you the possibility to use FastIni with other programs too.
+      </TEXT>
+    </PAGE>
+    </PAGE>
+      <PAGE INDEX=3 TYPE=CONFIGURE>
+      <NEXTBUTTON TARGET=4>~Next</NEXTBUTTON>
+      <TEXT>
+      If you choose not to modify CONFIG.SYS, you will have to review all the modifications that would have been made, and make them manually.
+      </TEXT>
+    </PAGE>
+    </PAGE>
+      <PAGE INDEX=4 TYPE=README>
+      <NEXTBUTTON TARGET=0>I~nstall</NEXTBUTTON>
+      <TEXT>
+      Press "Install" to begin installing this archive.
+      </TEXT>
+      <README FORMAT=PLAIN>
+
+      WARNING: Due to a bug in WarpIn versions up to 0.9.8,
+      after installation you will have to review the mudesk.dat
+      and mudesk.cfg files BEFORE REBOOTING.
+
+      In these files, look for the string "?:\" and substitute
+      your boot drive (e.g. If your boot drive is E:, substitute
+      "?:\" with "e:\").
+
+      </README>
+    </PAGE>
+  </BODY>
+</WARPIN>
+

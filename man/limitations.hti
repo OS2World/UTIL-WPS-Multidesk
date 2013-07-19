@@ -1,0 +1,10 @@
+.. ----------------------------------------
+.1 Limitations
+.. ----------------------------------------
+.an LIMITATIONS
+.
+The current version of [=TITLE] has the following limitations:
+.ul
+- names of source (and include) files may not contain blanks
+- artwork links are not (yet) supported
+

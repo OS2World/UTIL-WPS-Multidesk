@@ -1,0 +1,25 @@
+MultiDesk (F)requently (A)sked (Q)uestions:
+===========================================
+
+Q: My applications frequently crash in PMMERGE.DLL on secondary desktops.
+
+A: This may be a problem with font paths. If you have moved your fonts,
+   chances are that the newly created INI files will contain bad paths,
+   pointing to non-existent places. Also, if the paths don't have a drive
+   letter, OS/2 looks in the boot drive as default. Make the necessary
+   corrections (you can use regedit2.exe) and the crashes are gone.
+
+-----------------------------------------------------------------------------
+
+Q: Upon starting Multidesk Administrator I have the following error:
+   << Routine not found in CT_NewLine = CT_NewLine||AFGetBootDrive()||':' >>
+
+A: This error has been reported by a few users during testing. The solution
+   is to switch from Object Rexx to Classic Rexx, or the other way around. 
+   Some users never have problems, others have problems with one of the two
+   language parsers. I still have not clearly undertstood what's going on, 
+   but the switch seems to cure all problems. You can find a script on
+   hobbes.nmsu.edu that switches rexx interpreters on the fly.
+   Look for swrexx.zip using Hobbes' search engine.
+
+-----------------------------------------------------------------------------

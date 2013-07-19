@@ -1,0 +1,41 @@
+General:
+
+   Integrate SaveFolder. >in progress<
+   Add THANKYOUs to the readme. >DONE<
+
+Installation:
+
+   Make the users directory. >DONE<
+   Make directory for default user (admin) in the users dir. >DONE<
+   (Have to wait for WarpIn fixes for these) -X-
+
+Login program:
+
+   Command files (REXX) before- and after-login. >DONE<
+   Try user- and system-ini recovery on boot-up (from .!!! files).
+   Have different default users based on time of the day.
+   Manage multiple WarpCenters. >DONE<
+   
+Admin program:
+
+   Abort user creation when answered 'NO' for creating a standard tree. >DONE<
+   Include a standard MultiMedia folder in the desktop templates. >PARTLY DONE - LOOK INTO MMOS2 PATH => SET MMBASE<
+   PM_DISPLAYDRIVERS:CURRENTDRIVER doesn't stick when set for a new desktop (first desktop creation resets it?). >DONE<
+   Implement the "manage desktops" capability (move/reinit/delete user desktops).
+   Implement copying a desktop (should go in "manage desktops")
+   Implement copying some folders (leave it to the user, with SaveFolder)
+   Better behaviour for the log window. >PARTLY DONE<
+   Move the window with mouse (low prio).
+   Implement copying custom INI keys. >DONE<
+
+AuxFuncs:
+   Correct the behaviour of the AFDelTree function (it changes the current dir) >DONE<
+   
+BUGS/PROBLEMS?:
+
+   Case sensitiveness of names and passwords. (verify)
+   Differences in this respect between MuDesk and MuAdmin. (verify)
+   The desktop archiving feature of OS/2 does not cope with multiple desktops.
+   (--> every time you create a desktop, you'll be overwriting the archive
+        number 0 - I may stop this by removing arcinst.exe from the INI
+        template. But this is not a real solution.) >REMOVED_ARCINST.EXE<

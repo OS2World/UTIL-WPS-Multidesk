@@ -1,0 +1,233 @@
+2001-03-11  Cristiano Guadagnino  <criguada@tin.it>
+
+	* c:/cvs/cvsfiles/mudesk/mudesk.c, c:/cvs/cvsfiles/mudesk/mudesk.h, 
+          c:/cvs/cvsfiles/mudesk/uit.rc:
+	ChangeLog: Recovered logs from old development CVS
+	mudesk.*: Fixed a bug where MD didn't release the lock on mudesk.lck
+	uit.rc: Fixed a missing entry (DefaultFont) and integrated MMEDIA folder;
+	        also fixed a problem with Desktop archives (removed arcinst.exe)
+	auxfuncs.def: added CVS information
+	firstcfg.cmd: added tests to avoid overwriting setup on upgrade
+	docs/*.txt: added new text files for the documentation package
+	SaveFolder/*: beginning integration of SaveFolder sources
+
+2001-03-09  Cristiano Guadagnino  <criguada@tin.it>
+
+	* c:/cvs/cvsfiles/mudesk/.cvsignore, c:/cvs/cvsfiles/mudesk/FastIni.txt,
+          c:/cvs/cvsfiles/mudesk/Groups.csv, c:/cvs/cvsfiles/mudesk/Groups.txt,
+          c:/cvs/cvsfiles/mudesk/MuDesk.ico, c:/cvs/cvsfiles/mudesk/MuDesk.prj, 
+          c:/cvs/cvsfiles/mudesk/admin2.h, c:/cvs/cvsfiles/mudesk/admin2.res, 
+          c:/cvs/cvsfiles/mudesk/mmedia.rc, c:/cvs/cvsfiles/mudesk/muadmin.ico, 
+          c:/cvs/cvsfiles/mudesk/mudesk.bnr, c:/cvs/cvsfiles/mudesk/mudesk.c, 
+          c:/cvs/cvsfiles/mudesk/mudesk.cfg, c:/cvs/cvsfiles/mudesk/mudesk.dat, 
+          c:/cvs/cvsfiles/mudesk/mudesk.h, c:/cvs/cvsfiles/mudesk/mudesk.lck, 
+          c:/cvs/cvsfiles/mudesk/sit.rc, c:/cvs/cvsfiles/mudesk/uit.rc:
+	Imported sources
+
+	* c:/cvs/cvsfiles/mudesk/.cvsignore, c:/cvs/cvsfiles/mudesk/FastIni.txt, 
+          c:/cvs/cvsfiles/mudesk/Groups.csv, c:/cvs/cvsfiles/mudesk/Groups.txt, 
+          c:/cvs/cvsfiles/mudesk/MuDesk.ico, c:/cvs/cvsfiles/mudesk/MuDesk.prj, 
+          c:/cvs/cvsfiles/mudesk/admin2.h, c:/cvs/cvsfiles/mudesk/admin2.res, 
+          c:/cvs/cvsfiles/mudesk/mmedia.rc, c:/cvs/cvsfiles/mudesk/muadmin.ico, 
+          c:/cvs/cvsfiles/mudesk/mudesk.bnr, c:/cvs/cvsfiles/mudesk/mudesk.c, 
+          c:/cvs/cvsfiles/mudesk/mudesk.cfg, c:/cvs/cvsfiles/mudesk/mudesk.dat, 
+          c:/cvs/cvsfiles/mudesk/mudesk.h, c:/cvs/cvsfiles/mudesk/mudesk.lck, 
+          c:/cvs/cvsfiles/mudesk/sit.rc, c:/cvs/cvsfiles/mudesk/uit.rc, 
+          c:/cvs/cvsfiles/mudesk/admin2.dlg:
+	New file.
+
+	* c:/cvs/cvsfiles/mudesk/admin2.dlg: first imported file
+
+2001-03-05  Cristiano Guadagnino  <guadagnino.cristiano@creval.it>
+
+	* todo.txt, ADMIN2.RES, mudesk.c, mudesk.h:
+	Admin2.res: Corrected to compare directory names without case sens.
+	mudesk.*: Corrected to unlock files if root logs in
+	todo.txt: Updated
+
+2001-02-21  Cristiano Guadagnino  <guadagnino.cristiano@creval.it>
+
+	* ADMIN2.RES, FastIni.txt, mmedia.rc, mudesk.h, todo.txt:
+	FastIni.txt: Info about the FastIni package
+	mmedia.rc:	RC file to recreate a standard multimedia folder
+	todo.txt:	Detailed report on what to do (thoughts, suggestions)
+	mudesk.h:	Reenabled CRIS_DEBUG flag
+	admin2.res:	Some bug fixes
+
+2001-02-07  Cristiano Guadagnino  <guadagnino.cristiano@creval.it>
+
+	* uit.rc:
+	UIT.RC: Changed default and active display drivers, because GRADD is not
+	        default on Warp4 (but it is on WSeB+).
+
+	* ADMIN2.RES: Added saving of window size/position into muadmin.ini
+
+2001-02-05  Cristiano Guadagnino  <guadagnino.cristiano@creval.it>
+
+	* muadmin.ico, mudesk.c, mudesk.dat, mudesk.h, mudesk.lck, ADMIN2.DLG,
+          ADMIN2.H, ADMIN2.RES, Groups.csv, Groups.txt, MuDesk.ico,
+          mdctrls.dll, mdicons.dll:
+	Updates to admin program:
+	- Added the possibility to move the window with an ad-hoc button on the
+	  bottom-right side.
+	- Corrected several bugs.
+	- Enhancements to the create new user function (Copy INI settings, etc).
+	Updates to the main program:
+	- Added locking of custom files (mudesk.lck)
+	- Added management of the USER_INI variable
+	mdctrls.dll:
+	- Added two new icons for window movement (admin).
+	groups.*:
+	- Added INI-settings groups for the 'create new user' function.
+	*.ico:
+	- New icons for the programs.
+
+2001-01-16  Cristiano Guadagnino  <guadagnino.cristiano@creval.it>
+
+	* ADMIN2.DLG, ADMIN2.RES, mudesk.cfg, uit.rc:
+	admin2.*:	Completed deletion of users (now deletes directory,
+		desktop and the user itself.. any combination, based
+		on user's choice).
+		Fixed lots of bugs.
+		Fixed a bad bug in the RemoveItemFromStem() function.
+		Now the buttons 'create user' and 'delete user' behave
+		correctly on window resize.
+	mudesk.cfg: New directive: users_tree. Sets the entry point to the
+		  users' directories.
+	uit.rc:	Removed line regarding SmartCenter (doesn't support multiple
+		instances of itself).
+		Fixed line regarding desktop (removed last backslash).
+		Experimenting with the 'nowhere' directory.
+
+2001-01-12  Cristiano Guadagnino  <guadagnino.cristiano@creval.it>
+
+	* functest.cmd:
+	Changed functest.cmd to match the new names of auxiliary functions.
+
+2001-01-11  Cristiano Guadagnino  <guadagnino.cristiano@creval.it>
+
+	* ADMIN2.H, ADMIN2.RES, functest.cmd, mudesk.c, mudesk.cfg, mudesk.h:
+	Admin2.*: Updates admin program with creation of user directories (not
+    		  complete).
+	mudesk.cfg: Changed to include the new users_tree directive.
+	mudesk.[ch]: Removed log from sources.
+	functest.cmd: Little rexx program to test the new AuxFuncs.dll
+                      functions.
+
+2001-01-10  Cristiano Guadagnino  <guadagnino.cristiano@creval.it>
+
+	* admin2.dll, mdctrls.dll: Added two new resource DLLs.
+
+	* sit.rc, uit.rc, ADMIN2.DLG, ADMIN2.H, ADMIN2.RES, mudesk.cfg, mudesk.h:
+	Update administration tool:
+		- Now loads and saves correctly.
+		- Can change the value in the container.
+		- Added buttons to create and delete users.
+	*.rc:
+		- added templates for USER_INI and SYSTEM_INI, to be used
+		  with MAKEINI.
+
+2001-01-10  Cristiano Guadagnino  <guadagnino.cristiano@creval.it>
+
+	* admin2.dll, mdctrls.dll: Added two new resource DLLs.
+
+	* sit.rc, uit.rc, ADMIN2.DLG, ADMIN2.H, ADMIN2.RES, mudesk.cfg,
+	* mudesk.h:
+	Update administration tool:
+		- Now loads and saves correctly.
+		- Can change the value in the container.
+		- Added buttons to create and delete users.
+	*.rc:
+		- added templates for USER_INI and SYSTEM_INI, to be used
+		  with MAKEINI.
+
+2001-01-04  Cristiano Guadagnino  <guadagnino.cristiano@creval.it>
+
+	* ADMIN2.RES, mudesk.c, mudesk.cfg, mudesk.h:
+	ADMIN2.RES: Some small corrections related to the new name (but the real
+                    working version is at home, and needs to be integrated).
+	mudesk.* - Added two new CFG options: root_user and relaxed_security.
+		   Now it is possible to configure root's name (root_user).
+		   Now it is possible to bypass password asking, but for the
+                   root user (relaxed_security).
+		   Now it is possible to log in with default user simply by
+                   pressing enter (relaxed_security).
+		   For security reasons, MuDesk now looks for the DAT file in
+                   his own directory (removed the command line parameter).
+
+2000-12-22  Cristiano Guadagnino  <guadagnino.cristiano@creval.it>
+
+	* mudesk.h: Forgot to add mudesk.h :-)
+
+	* mudesk.c, mudesk.cfg, mudesk.dat, MuDesk.prj, admin.DLG, admin.H,
+	* admin.RES, login.bnr, login.c, login.c.branch, login.cfg, login.dat,
+	* mudesk.bnr, Login.prj:
+	Renamed login.* to mudesk.* (stands for MultiDesk, and is written ÊDesk).
+	Reformatted source to prepare for multi-user development.
+
+2000-12-19  Cristiano Guadagnino  <guadagnino.cristiano@creval.it>
+
+	* ADMIN2.H, ADMIN2.DLG: Reworked action buttons.
+	Now the controls resize dinamically with the dialog. I had to code
+	this explicitely, because bitmap-buttons would otherwise scale,
+	resulting in an ugly looking window.
+
+	* mdicons.dll, ADMIN2.RES: Mods for CVS binary handling.
+
+2000-12-15  Cristiano Guadagnino  <guadagnino.cristiano@creval.it>
+
+	* mdicons.dll, ADMIN2.DLG, ADMIN2.H, ADMIN2.RES:
+	mdicons.dll: Reworked bitmap background, for a better integration with the
+                 dialog window background.
+	admin2.*: New release of the users' administration application.
+              Realized with a container control.
+
+2000-12-11  Cristiano Guadagnino  <guadagnino.cristiano@creval.it>
+
+	* admin.DLG, admin.H, admin.RES, mdicons.dll:
+	Updated code to check for existence of login.dat in current dir, and output a warning
+	accordingly. Changed message for the non-authorized users (non-root).
+	Implemented reading of DAT file.
+	Partially implemented the filling of dialog fields with DAT file data, and
+	enabling/disabling buttons accordingly.
+
+	New idea: created a new form with a container control to display all users
+	at once (uses mdicons.dll)
+	Added mdicons.dll: Icon resources for the container view.
+
+	TODO: change the "name" combobox back to a normal entryfield.. user choice
+	will be done at the container level. => I can reenable the CANVAS background
+	control (eyecandy).
+
+2000-12-06  Cristiano Guadagnino  <guadagnino.cristiano@creval.it>
+
+	* admin.H 1.2, admin.RES 1.3:
+	Implemented control for authorization, in Administator applet.
+
+	* login.c 1.2, admin.DLG 1.1, admin.H 1.1, admin.RES 1.2:
+	Prototype implementation of the MultiDesk (ÊDesk) Administration Tool.
+	Still it is a GUI-only implementation.. all procedures are stubs.
+
+	* Login.prj 1.1.1.1, admin.RES 1.1.1.1, login.bnr 1.1.1.1, 
+	* login.c 1.1.1.1, login.c.branch 1.1.1.1, login.cfg 1.1.1.1,
+	* login.dat 1.1.1.1:
+	Initial import of LoginTool sources.
+
+	The following enhancements are made over the previous (non-CVS)
+	sources:
+		- Added config-file parsing. Config file is named login.cfg.
+		- Added possibility to set screen-saver timeout.
+		- Added default-user, with automatic login after a (settable)
+			timeout.
+		- Added logging. Both successful and unsuccsessful logins are
+			logged. Log file name and path is configurable. Root
+			can choose to enable/disable logging.
+		- Added "root" user. It is the only user that can edit the
+			config file and the passwords file. Also it is the
+			only user that can see the log.
+
+	* Login.prj 1.1, admin.RES 1.1, login.bnr 1.1, login.c 1.1, 
+	* login.c.branch 1.1, login.cfg 1.1, login.dat 1.1:
+	New file.
+
+

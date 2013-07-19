@@ -1,0 +1,46 @@
+Group 		Key				INI
+^^^^^ 		^^^				^^^
+
+Printers	PM_DD_*				System
+		PM_SPOOLER*
+		PM_DEVICE_DRIVERS		User
+		PM_PrintObject*
+		PM_SPOOLER*
+
+Preferences	PM_SOUND*			System
+		PM_SOUNDS*
+		PM_AlternateInputMethods	User
+		PM_Colors
+		PM_Default_Colors
+		PM_ControlPanel
+		PM_Workplace
+		WINOS2
+		PM_Default_National
+		PM_National
+		Shield
+		PM_SystemFonts
+
+Display		PM_DISPLAYDRIVERS		User
+		WIN_RES_*
+
+Fonts		PM_Font_Drivers			User
+		PM_Fonts
+
+Necessary 	PRINT_NEW_OBJECTS		System
+		PM_IBMBGA			User
+		PM_INSTALL
+
+Netscape	Netscape			User
+		MM_Workplace:*
+		WPURLDEFAULTSETTINGS
+
+Java		Java Plug-in			User
+
+Classes		PM_Objects@ClassTable		System
+		PM_Workplace:BaseClass		User
+		PM_Workplace:IplLoad
+		PM_Workplace:ReplaceList
+		SYS_DLLS
+
+XWorkplace	XFldTreesize			User
+		XWorkplace*

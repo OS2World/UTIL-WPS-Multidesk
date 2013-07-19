@@ -1,0 +1,36 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Cristiano Guadagnino">
+   <meta name="GENERATOR" content="Mozilla/4.61 [en] (OS/2; U) [Netscape]">
+   <title>Help Me!!</title>
+</head>
+<body>
+
+<h2>
+<img SRC="rebootng.png" ALT="Using &micro;Desk without rebooting?" NOSAVE height=41 width=442></h2>
+Well, in principle it would be possible to use &micro;Desk without rebooting:
+since it loads before the PROTSHELL, that is before PM and the WPS, it
+could shut down both this programs when asked to switch desktop. BTW, while
+it is fairly
+<br>simple to shut down and restart the WPS, I've found absolutely NO way
+to do the same with PM.
+<p>That is: if you try to kill the first instance of PMSHELL (which initializes
+the PM environment), the system will lock up solid. This happens even if
+the first instance is a child of &micro;Desk, and has been spawned by it.
+<p>The real problem is that PM has been written without thinking about
+the possibility of stopping it. Even on shutdown, the system is locked
+so that you can't do anything anymore, but PM is still there and functional.
+<p>So, if anyone knows anything more about PM internal structure, or knows
+a way to kill and restart it without locking the system, please let <a href="mailto:criguada@libero.it">me</a>
+know!!
+<p>Another approach that comes to mind would be a fast-reboot feature.
+<br>I remember a third-party DOS memory manager that had such a feature:
+it did not reboot the whole system, but only made some sort of tweaking
+to let DOS reload completely. I don't know how it was done, and don't know
+if it is possible under a protected operating system like OS/2, but if
+someone has ideas...
+<br>&nbsp;
+</body>
+</html>
